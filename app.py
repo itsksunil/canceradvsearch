@@ -8,6 +8,12 @@ from datetime import datetime
 DATA_FILE = "cancer_clinical_dataset.json"
 DEFAULT_CUTOFF = 0.4
 
+# Initialize session state
+if 'search_input' not in st.session_state:
+    st.session_state.search_input = ""
+if 'last_query' not in st.session_state:
+    st.session_state.last_query = ""
+
 # Load and validate data with error handling
 @st.cache_data
 def load_data():
@@ -58,10 +64,8 @@ def find_matches(question, dataset, cutoff=DEFAULT_CUTOFF, max_results=3):
 def generate_suggestions(question, dataset):
     # Extract keywords from question
     keywords = set(question.lower().split())
-    keywords.discard("what")
-    keywords.discard("how")
-    keywords.discard("when")
-    keywords.discard("atezolizumab")  # Remove if you want to keep drug names
+    stop_words = {"what", "how", "when", "why", "which", "where", "who"}
+    keywords = keywords - stop_words
     
     # Find similar questions in dataset
     all_prompts = [entry["prompt"] for entry in dataset]
@@ -127,18 +131,25 @@ data = load_data()
 if data is None:
     st.stop()
 
-# Search interface
+# Search interface - using session state to maintain query
 user_question = st.text_input(
     "Search clinical questions:",
+    value=st.session_state.search_input,
     placeholder="e.g., What is the response rate for atezolizumab in PD-L1 high patients?",
     help="Enter your clinical question or keywords",
     key="search_input"
 )
 
+# Handle suggestion clicks
+def update_search(question):
+    st.session_state.search_input = question
+    st.session_state.last_query = question  # Store the last query used
+
 # Display results
-if user_question:
+if st.session_state.search_input:
+    current_query = st.session_state.search_input
     with st.spinner("Searching clinical knowledge base..."):
-        results = find_matches(user_question, data, cutoff=cutoff, max_results=max_results)
+        results = find_matches(current_query, data, cutoff=cutoff, max_results=max_results)
         
         if results:
             st.success(f"🔍 Found {len(results)} matching results")
@@ -157,15 +168,23 @@ if user_question:
             st.error("No direct matches found. Here are some suggestions:")
             
             # Show alternative suggestions
-            similar_questions = generate_suggestions(user_question, data)
+            similar_questions = generate_suggestions(current_query, data)
             
             if similar_questions:
                 st.markdown("**Try these similar questions:**")
+                cols = st.columns(2)
+                col_idx = 0
                 for i, question in enumerate(similar_questions, 1):
-                    if st.button(f"{i}. {question}", key=f"suggestion_{i}"):
-                        # Update the search input with the suggested question
-                        st.session_state.search_input = question
-                        st.experimental_rerun()
+                    with cols[col_idx]:
+                        if st.button(
+                            f"{question[:60]}...",
+                            key=f"suggestion_{i}",
+                            help="Click to try this search",
+                            on_click=update_search,
+                            args=(question,)
+                        ):
+                            pass
+                    col_idx = 1 - col_idx  # Alternate between columns
             
             # General search tips
             st.markdown("""
@@ -179,11 +198,19 @@ if user_question:
             # Show sample questions if no similar questions found
             if not similar_questions:
                 st.markdown("**Sample questions you could try:**")
-                st.markdown("""
-                - "What is the recommended dose for atezolizumab in bladder cancer?"
-                - "How does PD-L1 expression affect atezolizumab response?"
-                - "What are common adverse events with atezolizumab combination therapy?"
-                """)
+                samples = [
+                    "What is the recommended dose for atezolizumab in bladder cancer?",
+                    "How does PD-L1 expression affect atezolizumab response?",
+                    "What are common adverse events with atezolizumab combination therapy?"
+                ]
+                for sample in samples:
+                    if st.button(
+                        sample,
+                        key=f"sample_{sample[:10]}",
+                        on_click=update_search,
+                        args=(sample,)
+                    ):
+                        pass
 
 # Footer
 st.markdown("---")
