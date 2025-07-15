@@ -11,8 +11,6 @@ if 'current_query' not in st.session_state:
     st.session_state.current_query = ""
 if 'show_home' not in st.session_state:
     st.session_state.show_home = True
-if 'search_triggered' not in st.session_state:
-    st.session_state.search_triggered = False
 
 # Constants
 DATA_FILE = "cancer_clinical_dataset.json"
@@ -37,9 +35,11 @@ def load_and_index_data():
                 
                 # Index words for faster search
                 for word in set(entry["prompt"].lower().split()):
-                    word_index[word].append(idx)
+                    if len(word) > 2:  # Only index words longer than 2 characters
+                        word_index[word].append(idx)
                 for word in set(entry["completion"].lower().split()):
-                    word_index[word].append(idx)
+                    if len(word) > 2:
+                        word_index[word].append(idx)
         
         if not clean_data:
             st.error("No valid Q&A pairs found in the dataset.")
@@ -94,35 +94,30 @@ def show_home():
     This tool helps researchers access structured clinical trial information.
     """)
     
-    # Search input
-    query = st.text_input(
-        "Search clinical questions:",
-        value=st.session_state.current_query,
-        placeholder="e.g., What is the response rate for atezolizumab in PD-L1 high patients?",
-        help="Enter your clinical question or keywords",
-        key="search_input"
-    )
-    
-    # Single-click search with form submission
+    # Use a form to handle search submission
     with st.form("search_form"):
-        submitted = st.form_submit_button("Search", type="primary")
-        if submitted and query.strip():
+        query = st.text_input(
+            "Search clinical questions:",
+            value=st.session_state.current_query,
+            placeholder="e.g., What is the response rate for atezolizumab in PD-L1 high patients?",
+            help="Enter your clinical question or keywords"
+        )
+        
+        # Search button within the form
+        if st.form_submit_button("Search", type="primary") and query.strip():
             st.session_state.current_query = query
-            st.session_state.search_triggered = True
             st.session_state.show_home = False
             st.session_state.search_history.append({
                 "query": query,
                 "timestamp": datetime.now().isoformat()
             })
-            st.experimental_rerun()
+            # No need for experimental_rerun() when using forms
 
 # Results page layout
 def show_results():
     # Back button
     if st.button("← Back to Home"):
         st.session_state.show_home = True
-        st.session_state.search_triggered = False
-        st.experimental_rerun()
         return
     
     st.title("🔍 Search Results")
@@ -133,8 +128,7 @@ def show_results():
             for i, search in enumerate(reversed(st.session_state.search_history), 1):
                 if st.button(f"{i}. {search['query']}", key=f"history_{i}"):
                     st.session_state.current_query = search["query"]
-                    st.session_state.search_triggered = True
-                    st.experimental_rerun()
+                    st.session_state.show_home = False
     
     # Load data
     data, word_index = load_and_index_data()
@@ -144,16 +138,14 @@ def show_results():
     # Current query display
     st.markdown(f"**Current Search:** {st.session_state.current_query}")
     
-    # Only perform search when triggered
-    if st.session_state.search_triggered:
-        with st.spinner("Searching clinical knowledge base..."):
-            ranked_results = keyword_search(st.session_state.current_query, data, word_index)
-            st.session_state.search_triggered = False  # Reset trigger
-            
-            if ranked_results:
-                display_results(ranked_results)
-            else:
-                show_no_results(data)
+    # Perform search
+    with st.spinner("Searching clinical knowledge base..."):
+        ranked_results = keyword_search(st.session_state.current_query, data, word_index)
+        
+        if ranked_results:
+            display_results(ranked_results)
+        else:
+            show_no_results(data, word_index)
 
 def display_results(ranked_results):
     st.success(f"Found {len(ranked_results)} relevant results")
@@ -202,27 +194,32 @@ def display_results(ranked_results):
                     key=f"csv_{i}"
                 )
 
-def show_no_results(data):
+def show_no_results(data, word_index):
     st.error("No matches found. Try these suggestions:")
     
     # Generate suggestions from the original query
-    suggestions = set()
     query_words = set(word.lower() for word in st.session_state.current_query.split() if len(word) > 3)
+    suggestions = set()
     
-    for entry in data:
-        prompt_words = set(entry["prompt"].lower().split())
-        if query_words & prompt_words:
-            suggestions.add(entry["prompt"])
+    if query_words:
+        # Find documents with at least one matching word
+        doc_ids = set()
+        for word in query_words:
+            if word in word_index:
+                doc_ids.update(word_index[word])
+        
+        # Get prompts from matching documents
+        for doc_id in list(doc_ids)[:50]:  # Limit to first 50 for performance
+            suggestions.add(data[doc_id]["prompt"])
             if len(suggestions) >= 5:
                 break
     
     if suggestions:
         st.write("**Similar questions in our database:**")
         for suggestion in list(suggestions)[:5]:
-            if st.button(suggestion, key=f"suggestion_{suggestion[:20]}"):
+            if st.button(suggestion[:100], key=f"suggestion_{hash(suggestion)}"):
                 st.session_state.current_query = suggestion
-                st.session_state.search_triggered = True
-                st.experimental_rerun()
+                st.session_state.show_home = False
     
     st.markdown("""
     **Search Tips:**
@@ -249,7 +246,6 @@ def main():
         if not st.session_state.show_home:
             if st.button("🏠 Home"):
                 st.session_state.show_home = True
-                st.experimental_rerun()
         
         st.markdown("---")
         st.markdown("### About")
