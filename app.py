@@ -23,6 +23,10 @@ if 'gene_filter' not in st.session_state:
     st.session_state.gene_filter = []
 if 'suggestions' not in st.session_state:
     st.session_state.suggestions = []
+if 'cancer_types' not in st.session_state:
+    st.session_state.cancer_types = []
+if 'genes' not in st.session_state:
+    st.session_state.genes = []
 
 # Constants
 DATA_FILE = "cancer_clinical_dataset.json"
@@ -31,13 +35,19 @@ HISTORY_FILE = "search_history.json"
 # Load and save search history
 def load_search_history():
     if os.path.exists(HISTORY_FILE):
-        with open(HISTORY_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
+        try:
+            with open(HISTORY_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except:
+            return []
     return []
 
 def save_search_history():
-    with open(HISTORY_FILE, "w", encoding="utf-8") as f:
-        json.dump(st.session_state.search_history, f)
+    try:
+        with open(HISTORY_FILE, "w", encoding="utf-8") as f:
+            json.dump(st.session_state.search_history, f)
+    except:
+        pass
 
 # Load and preprocess data with caching
 @st.cache_data
@@ -54,16 +64,29 @@ def load_and_index_data():
 
         for idx, entry in enumerate(raw_data):
             if isinstance(entry, dict) and "prompt" in entry and "completion" in entry:
+                # Clean and standardize data
                 entry["prompt"] = str(entry["prompt"]).strip()
                 entry["completion"] = str(entry["completion"]).strip()
-                clean_data.append(entry)
-                all_prompts.append(entry["prompt"])
-
-                # Extract cancer types and genes
+                
+                # Extract metadata
+                entry_cancer_types = []
                 if "cancer_type" in entry:
-                    cancer_types.update(entry["cancer_type"].split(", "))
+                    entry_cancer_types = [ct.strip() for ct in str(entry["cancer_type"]).split(",")]
+                    cancer_types.update(entry_cancer_types)
+                
+                entry_genes = []
                 if "genes" in entry:
-                    genes.update(entry["genes"].split(", "))
+                    entry_genes = [g.strip() for g in str(entry["genes"]).split(",")]
+                    genes.update(entry_genes)
+                
+                # Store cleaned entry
+                clean_data.append({
+                    "prompt": entry["prompt"],
+                    "completion": entry["completion"],
+                    "cancer_type": ", ".join(entry_cancer_types) if entry_cancer_types else "",
+                    "genes": ", ".join(entry_genes) if entry_genes else ""
+                })
+                all_prompts.append(entry["prompt"])
 
                 # Index words
                 for word in set(entry["prompt"].lower().split()):
@@ -75,7 +98,7 @@ def load_and_index_data():
 
         if not clean_data:
             st.error("No valid Q&A pairs found in the dataset.")
-            return None, None, None, None, None
+            return None, None, [], [], []
         
         # Generate random suggestions
         random_suggestions = random.sample(all_prompts, min(10, len(all_prompts))) if all_prompts else []
@@ -84,10 +107,13 @@ def load_and_index_data():
     
     except Exception as e:
         st.error(f"Error loading data: {str(e)}")
-        return None, None, None, None, None
+        return None, None, [], [], []
 
 # Enhanced keyword search with filters
 def keyword_search(query, dataset, word_index):
+    if not query or not dataset:
+        return []
+    
     query_words = set(word.lower() for word in query.split() if len(word) > 2)
     
     doc_matches = defaultdict(int)
@@ -135,14 +161,14 @@ def filter_results(results, min_score, keyword_filters, cancer_types, genes):
                 continue
         
         # Apply cancer type filter
-        if cancer_types and "cancer_type" in entry:
-            entry_types = set(entry["cancer_type"].split(", "))
+        if cancer_types and entry["cancer_type"]:
+            entry_types = set(ct.strip() for ct in entry["cancer_type"].split(","))
             if not any(ct in entry_types for ct in cancer_types):
                 continue
         
         # Apply gene filter
-        if genes and "genes" in entry:
-            entry_genes = set(entry["genes"].split(", "))
+        if genes and entry["genes"]:
+            entry_genes = set(g.strip() for g in entry["genes"].split(","))
             if not any(g in entry_genes for g in genes):
                 continue
         
@@ -280,8 +306,10 @@ def show_results():
         return
 
     # Store cancer types and genes in session state
-    st.session_state.cancer_types = cancer_types
-    st.session_state.genes = genes
+    if cancer_types:
+        st.session_state.cancer_types = cancer_types
+    if genes:
+        st.session_state.genes = genes
 
     # Display search history
     if st.session_state.search_history:
@@ -304,7 +332,7 @@ def show_results():
             st.session_state.keyword_filters,
             st.session_state.cancer_type_filter,
             st.session_state.gene_filter
-        )
+        ) if ranked_results else []
 
         if filtered_results:
             display_results(filtered_results, ranked_results)
@@ -346,9 +374,9 @@ def display_results(results, all_results):
             
             # Metadata
             metadata = []
-            if "cancer_type" in entry:
+            if entry["cancer_type"]:
                 metadata.append(f"**Cancer Type:** {entry['cancer_type']}")
-            if "genes" in entry:
+            if entry["genes"]:
                 metadata.append(f"**Genes:** {entry['genes']}")
             if metadata:
                 st.markdown(" | ".join(metadata))
@@ -387,7 +415,7 @@ def show_no_results(data, word_index):
     query_words = set(word.lower() for word in st.session_state.current_query.split() if len(word) > 3)
     suggestions = set()
 
-    if query_words and word_index:
+    if query_words and word_index and data:
         doc_ids = set()
         for word in query_words:
             if word in word_index:
@@ -431,10 +459,14 @@ def main():
         st.session_state.search_history = load_search_history()
 
     # Load data and suggestions
-    if not st.session_state.suggestions:
-        _, _, _, _, suggestions = load_and_index_data()
+    if not st.session_state.suggestions or not st.session_state.cancer_types or not st.session_state.genes:
+        data, word_index, cancer_types, genes, suggestions = load_and_index_data()
         if suggestions:
             st.session_state.suggestions = suggestions
+        if cancer_types:
+            st.session_state.cancer_types = cancer_types
+        if genes:
+            st.session_state.genes = genes
 
     with st.sidebar:
         st.image("https://via.placeholder.com/150x50?text=Cancer+Search", width=150)
