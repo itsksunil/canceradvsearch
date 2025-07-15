@@ -11,6 +11,10 @@ if 'current_query' not in st.session_state:
     st.session_state.current_query = ""
 if 'show_home' not in st.session_state:
     st.session_state.show_home = True
+if 'min_score' not in st.session_state:
+    st.session_state.min_score = 1
+if 'keyword_filters' not in st.session_state:
+    st.session_state.keyword_filters = []
 
 # Constants
 DATA_FILE = "cancer_clinical_dataset.json"
@@ -48,7 +52,7 @@ def load_and_index_data():
         st.error(f"Error loading data: {str(e)}")
         return None, None
 
-# Safe keyword search function
+# Enhanced keyword search with score calculation
 def keyword_search(query, dataset, word_index):
     query_words = set(word.lower() for word in query.split() if len(word) > 2)
     if not query_words:
@@ -58,7 +62,7 @@ def keyword_search(query, dataset, word_index):
     for word in query_words:
         if word in word_index:
             for doc_id in word_index[word]:
-                if doc_id < len(dataset):  # ✅ Prevent IndexError
+                if doc_id < len(dataset):
                     doc_matches[doc_id] += 1
 
     ranked_results = []
@@ -75,11 +79,34 @@ def keyword_search(query, dataset, word_index):
             "entry": entry,
             "score": total_score,
             "prompt_matches": prompt_matches,
-            "completion_matches": completion_matches
+            "completion_matches": completion_matches,
+            "all_keywords": query_words,
+            "matched_keywords": query_words & (prompt_words | completion_words)
         })
 
     ranked_results.sort(key=lambda x: x["score"], reverse=True)
     return ranked_results
+
+# Filter results based on score and keywords
+def filter_results(results, min_score, keyword_filters):
+    filtered = []
+    for result in results:
+        # Apply score filter
+        if result["score"] < min_score:
+            continue
+        
+        # Apply keyword filters if any
+        if keyword_filters:
+            matched = False
+            for kw in keyword_filters:
+                if kw.lower() in result["matched_keywords"]:
+                    matched = True
+                    break
+            if not matched:
+                continue
+        
+        filtered.append(result)
+    return filtered
 
 # Home page layout
 def show_home():
@@ -112,6 +139,41 @@ def show_results():
         return
 
     st.title("🔍 Search Results")
+    
+    # Filters sidebar
+    with st.sidebar:
+        st.subheader("🔎 Refine Results")
+        
+        # Score filter
+        st.session_state.min_score = st.slider(
+            "Minimum Match Score",
+            min_value=0,
+            max_value=20,
+            value=1,
+            help="Higher scores mean more keywords matched"
+        )
+        
+        # Keyword filters
+        st.markdown("**Filter by specific keywords:**")
+        new_keyword = st.text_input("Add keyword filter", key="new_keyword")
+        if st.button("Add Filter") and new_keyword.strip():
+            if new_keyword.lower() not in [k.lower() for k in st.session_state.keyword_filters]:
+                st.session_state.keyword_filters.append(new_keyword.strip())
+        
+        # Display active filters
+        if st.session_state.keyword_filters:
+            st.markdown("**Active Filters:**")
+            cols = st.columns(3)
+            for i, keyword in enumerate(st.session_state.keyword_filters):
+                with cols[i % 3]:
+                    if st.button(f"❌ {keyword}", key=f"remove_{keyword}"):
+                        st.session_state.keyword_filters.remove(keyword)
+                        st.rerun()
+        
+        if st.button("Clear All Filters"):
+            st.session_state.keyword_filters = []
+            st.session_state.min_score = 1
+            st.rerun()
 
     if st.session_state.search_history:
         with st.expander("📚 Search History", expanded=False):
@@ -128,15 +190,26 @@ def show_results():
 
     with st.spinner("Searching clinical knowledge base..."):
         ranked_results = keyword_search(st.session_state.current_query, data, word_index)
+        filtered_results = filter_results(
+            ranked_results,
+            st.session_state.min_score,
+            st.session_state.keyword_filters
+        )
 
-        if ranked_results:
-            display_results(ranked_results)
+        if filtered_results:
+            display_results(filtered_results)
         else:
             show_no_results(data, word_index)
 
-def display_results(ranked_results):
-    st.success(f"Found {len(ranked_results)} relevant results")
-    all_results = [result["entry"] for result in ranked_results]
+def display_results(results):
+    st.success(f"Found {len(results)} relevant results (filtered from {len(ranked_results)})")
+    
+    # Score distribution chart
+    if len(results) > 1:
+        scores = [r["score"] for r in results]
+        st.bar_chart(pd.DataFrame({"Score": scores}), use_container_width=True)
+    
+    all_results = [result["entry"] for result in results]
     
     col1, col2 = st.columns(2)
     with col1:
@@ -154,11 +227,18 @@ def display_results(ranked_results):
             mime="text/csv"
         )
 
-    for i, result in enumerate(ranked_results, 1):
+    for i, result in enumerate(results, 1):
         entry = result["entry"]
-        with st.expander(f"#{i} | Score: {result['score']} (Prompt: {result['prompt_matches']}, Answer: {result['completion_matches']}) - {entry['prompt'][:50]}...", expanded=(i==1)):
+        with st.expander(f"#{i} | Score: {result['score']} (Keywords: {', '.join(result['matched_keywords'])}) - {entry['prompt'][:50]}...", expanded=(i==1)):
             st.markdown(f"**Question:** {entry['prompt']}")
             st.markdown(f"**Answer:** {entry['completion']}")
+            
+            # Score details
+            with st.expander("🔍 Match Details"):
+                st.markdown(f"**Total Score:** {result['score']}")
+                st.markdown(f"**Prompt Matches:** {result['prompt_matches']}")
+                st.markdown(f"**Answer Matches:** {result['completion_matches']}")
+                st.markdown(f"**Matched Keywords:** {', '.join(result['matched_keywords']) or 'None'}")
 
             col1, col2 = st.columns(2)
             with col1:
@@ -179,7 +259,7 @@ def display_results(ranked_results):
                 )
 
 def show_no_results(data, word_index):
-    st.error("No matches found. Try these suggestions:")
+    st.error("No matches found with current filters. Try these suggestions:")
     
     query_words = set(word.lower() for word in st.session_state.current_query.split() if len(word) > 3)
     suggestions = set()
@@ -191,7 +271,7 @@ def show_no_results(data, word_index):
                 doc_ids.update(word_index[word])
 
         for doc_id in list(doc_ids)[:50]:
-            if doc_id < len(data):  # Prevent invalid access
+            if doc_id < len(data):
                 suggestions.add(data[doc_id]["prompt"])
                 if len(suggestions) >= 5:
                     break
@@ -205,10 +285,10 @@ def show_no_results(data, word_index):
 
     st.markdown("""
     **Search Tips:**
-    - Use specific drug names (e.g., "atezolizumab")
-    - Include cancer types (e.g., "NSCLC")
-    - Try both abbreviations and full terms (e.g., "OS" and "overall survival")
-    - Use at least 3-4 keywords for better results
+    - Try lowering the minimum score filter
+    - Remove some keyword filters
+    - Use more general search terms
+    - Check for typos in your search
     """)
 
 # Main app flow
