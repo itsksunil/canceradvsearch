@@ -2240,8 +2240,1245 @@
   {
     "prompt": "What complications can arise from radiation therapy in breast cancer patients?",
     "completion": "Radiation therapy complications include pain and skin changes, fatigue, nausea, hair loss, chronic heart and lung issues, and neuropathy."
+  },
+
+  {
+    "prompt": "What is the most common cause of lung cancer?",
+    "completion": "Smoking is the most common cause of lung cancer, responsible for approximately 90% of cases."
+  },
+  {
+    "prompt": "What percentage of lung cancer deaths are attributed to smoking?",
+    "completion": "It is estimated that 90% of lung cancer cases are attributable to smoking."
+  },
+  {
+    "prompt": "Which occupational exposure is a known risk factor for lung cancer?",
+    "completion": "Asbestos exposure, especially occupational, is a well-established risk factor for lung cancer."
+  },
+  {
+    "prompt": "Does passive smoking increase the risk of lung cancer?",
+    "completion": "Yes, passive smoking increases the risk of lung cancer by 20% to 30%."
+  },
+  {
+    "prompt": "How does idiopathic pulmonary fibrosis relate to lung cancer risk?",
+    "completion": "Idiopathic pulmonary fibrosis increases the risk of lung cancer independent of smoking history."
+  },
+  {
+    "prompt": "Which genetic mutations are commonly involved in non-small cell lung cancer?",
+    "completion": "Common genetic mutations in non-small cell lung cancer include EGFR, KRAS, and p16."
+  },
+  {
+    "prompt": "What are the leading genetic mutations associated with small cell lung cancer?",
+    "completion": "The genetic mutations most often associated with small cell lung cancer are MYC, BCL2, and p53."
+  },
+  {
+    "prompt": "What does the WHO 2021 classification of lung tumors emphasize?",
+    "completion": "The 2021 WHO classification emphasizes histopathological subtyping and immunohistochemical staining in diagnosis and prognosis."
+  },
+  {
+    "prompt": "Which subtype of lung cancer is associated with spread through air spaces and higher recurrence?",
+    "completion": "Tumors that spread through air spaces are associated with a higher recurrence rate after limited resections."
+  },
+  {
+    "prompt": "What percentage of global cancer deaths is caused by lung cancer according to 2020 data?",
+    "completion": "Lung cancer was responsible for an estimated 1.8 million deaths globally in 2020."
+  },
+  {
+    "prompt": "How does lung cancer mortality differ by sex in the United States?",
+    "completion": "Lung cancer mortality is higher in men compared to women in the United States."
+  },
+  {
+    "prompt": "Is there a racial disparity in lung cancer incidence?",
+    "completion": "There is no racial difference in incidence, but the age-adjusted mortality rate is higher in African American males."
+  },
+  {
+    "prompt": "What carcinogens besides smoking are linked to lung cancer?",
+    "completion": "Besides smoking, asbestos, radon, chromium, nickel, arsenic, polycyclic aromatic hydrocarbons, and radiation are linked to lung cancer."
+  },
+  {
+    "prompt": "What is the estimated annual incidence of lung cancer in the United States?",
+    "completion": "The annual incidence is estimated at over 234,000 new lung cancer cases in the United States."
+  },
+  {
+    "prompt": "What is the global incidence percentage of lung cancer among all cancers?",
+    "completion": "Lung cancer accounts for approximately 12.4% of all cancer diagnoses worldwide."
+  },
+  {
+    "prompt": "Which histopathological types are included in WHO’s classification of lung cancer?",
+    "completion": "WHO classifies lung cancer into types like adenocarcinomas, squamous cell carcinomas, large cell carcinomas, sarcomatoid carcinomas, neuroendocrine tumors, and others."
+  },
+  {
+    "prompt": "How has the trend in lung cancer changed over the 20th century?",
+    "completion": "Lung cancer was rare at the beginning of the 20th century but rose dramatically due to increased smoking."
+  },
+  {
+    "prompt": "Which subtype classification changes were made in the 2015 WHO system?",
+    "completion": "Poorly differentiated carcinomas were reclassified based on immunohistochemical markers such as p40, TTF-1, and chromogranin."
+  },
+  {
+    "prompt": "What role does radon play in lung cancer risk?",
+    "completion": "Radon exposure, especially in uranium miners and residential settings, increases the risk of lung cancer and contributes to 2% of lung cancer deaths in Europe."
+  },
+  {
+    "prompt": "Is lung cancer still considered a disease limited to developed countries?",
+    "completion": "No, nearly 50% of new lung cancer cases are now diagnosed in underdeveloped countries."
+  },
+
+
+  {
+    "prompt": "What are the two precursor glandular lesions of lung adenocarcinoma?",
+    "completion": "The two precursor glandular lesions are atypical adenomatous hyperplasia (AAH) and adenocarcinoma in situ."
+  },
+  {
+    "prompt": "What size defines atypical adenomatous hyperplasia (AAH)?",
+    "completion": "AAH generally measures 5 mm or less."
+  },
+  {
+    "prompt": "What is the characteristic growth pattern of adenocarcinoma in situ?",
+    "completion": "Adenocarcinoma in situ shows a lepidic growth pattern, which is growth restricted along alveolar structures."
+  },
+  {
+    "prompt": "What immunohistochemical markers are associated with adenocarcinoma?",
+    "completion": "Thyroid transcription factor 1 (TTF-1) and napsin A are markers associated with adenocarcinoma."
+  },
+  {
+    "prompt": "Which nonmucinous adenocarcinoma patterns are associated with poor prognosis?",
+    "completion": "Solid, micropapillary, and cribriform patterns are associated with poor prognosis."
+  },
+  {
+    "prompt": "What defines minimally invasive adenocarcinoma (MIA)?",
+    "completion": "MIA is a solitary adenocarcinoma ≤3 cm in size with ≤5 mm invasion and a predominant lepidic pattern."
+  },
+  {
+    "prompt": "What is invasive mucinous adenocarcinoma previously known as?",
+    "completion": "It was previously referred to as mucinous bronchioloalveolar carcinoma."
+  },
+  {
+    "prompt": "When should a lung tumor be classified as mixed adenocarcinoma?",
+    "completion": "When the tumor contains more than 10% of both mucinous and nonmucinous growth patterns."
+  },
+  {
+    "prompt": "What defines adenosquamous carcinoma?",
+    "completion": "Adenosquamous carcinoma has more than 10% each of glandular and squamous components."
+  },
+  {
+    "prompt": "Why is adjuvant chemotherapy recommended in Stage I adenosquamous carcinoma?",
+    "completion": "Because adenosquamous carcinoma is highly aggressive and has a high risk of recurrence and brain metastasis."
+  },
+  {
+    "prompt": "What are the key cytological features of squamous cell carcinoma?",
+    "completion": "Keratin presence and/or intercellular desmosomes, or p40, p63, CK5/6 positivity on immunohistochemistry."
+  },
+  {
+    "prompt": "What are the histological subtypes of squamous cell carcinoma?",
+    "completion": "Subtypes include nonkeratinizing, keratinizing, and basaloid."
+  },
+  {
+    "prompt": "What is a Pancoast tumor?",
+    "completion": "A Pancoast tumor is a squamous cell carcinoma located in the superior sulcus of the lung."
+  },
+  {
+    "prompt": "Which site is most commonly involved in recurrence of Pancoast tumors?",
+    "completion": "The brain is the most common site of recurrence after surgery in Pancoast tumors."
+  },
+  {
+    "prompt": "What defines large cell carcinoma histologically?",
+    "completion": "Large cell carcinoma lacks features of glandular, squamous, or neuroendocrine differentiation and is diagnosed by exclusion."
+  },
+  {
+    "prompt": "What are the cytologic features of large cell carcinoma?",
+    "completion": "Large polygonal cells with prominent nucleoli and abundant cytoplasm without defining features."
+  },
+  {
+    "prompt": "What are the subtypes of sarcomatoid carcinoma?",
+    "completion": "Sarcomatoid carcinoma includes pleomorphic carcinoma, carcinosarcoma, and pulmonary blastoma."
+  },
+  {
+    "prompt": "What are the histological features of small cell lung carcinoma?",
+    "completion": "Small cells with scant cytoplasm, absent nucleoli, extensive necrosis, and round or angulated nuclei."
+  },
+  {
+    "prompt": "Which immunohistochemical markers are used to identify small cell carcinoma?",
+    "completion": "Chromogranin and synaptophysin are commonly used markers."
+  },
+  {
+    "prompt": "Why is the older classification of small cell carcinoma into subtypes no longer used?",
+    "completion": "Because studies showed that the classification had limited clinical significance or prognostic value."
+  },
+
+
+  {
+    "prompt": "What percentage of patients with lung cancer present with a cough?",
+    "completion": "Cough is present in 50 to 75% of patients with lung cancer."
+  },
+  {
+    "prompt": "What type of sputum is associated with mucinous adenocarcinoma?",
+    "completion": "Mucinous adenocarcinoma is associated with the production of large volumes of thin, mucoid secretions."
+  },
+  {
+    "prompt": "How common is hemoptysis among patients with lung cancer?",
+    "completion": "Hemoptysis is reported in 15 to 30% of patients with lung cancer."
+  },
+  {
+    "prompt": "What is the prevalence of dyspnea at the time of lung cancer diagnosis?",
+    "completion": "Dyspnea is present in approximately 25 to 40% of patients at diagnosis."
+  },
+  {
+    "prompt": "What are the clinical features of superior vena cava syndrome in small cell lung cancer?",
+    "completion": "Superior vena cava syndrome presents with dilated neck veins, facial and upper limb edema, plethoric appearance, and mediastinal widening on chest radiograph."
+  },
+  {
+    "prompt": "What symptoms are seen in Pancoast syndrome?",
+    "completion": "Pancoast syndrome includes shoulder pain, Horner syndrome, and atrophy of hand muscles due to bony destruction."
+  },
+  {
+    "prompt": "How often do malignant pleural effusions occur in lung cancer patients?",
+    "completion": "Malignant pleural effusions occur in approximately 10 to 15% of lung cancer patients during their illness."
+  },
+  {
+    "prompt": "What is the significance of an ipsilateral malignant pleural effusion in lung cancer?",
+    "completion": "Ipsilateral malignant pleural effusion in bronchogenic carcinoma is considered unresectable."
+  },
+  {
+    "prompt": "What are possible causes of benign pleural effusions in lung cancer?",
+    "completion": "Benign pleural effusions may result from lymphatic obstruction, post-obstructive pneumonitis, or atelectasis."
+  },
+  {
+    "prompt": "What is the sensitivity of medical pleuroscopy for detecting malignant pleural disease?",
+    "completion": "Medical pleuroscopy has a sensitivity greater than 90% for detecting malignancy in pleural space."
+  },
+  {
+    "prompt": "What symptoms suggest bone metastasis in lung cancer patients?",
+    "completion": "Bone pain at the site of metastasis, elevated alkaline phosphatase, and hypercalcemia suggest bone metastasis."
+  },
+  {
+    "prompt": "Which bones are most commonly involved in lung cancer metastasis?",
+    "completion": "The vertebral bodies are the most common site of bone metastasis in lung cancer."
+  },
+  {
+    "prompt": "What percentage of non-small cell lung cancer (NSCLC) patients have bone metastasis at presentation?",
+    "completion": "Up to 20% of NSCLC patients present with bone metastasis."
+  },
+  {
+    "prompt": "What percentage of small cell lung cancer (SCLC) patients have bone metastasis at diagnosis?",
+    "completion": "Bone metastases are seen in 30 to 40% of SCLC patients at diagnosis."
+  },
+  {
+    "prompt": "Are adrenal metastases in lung cancer typically symptomatic?",
+    "completion": "Adrenal metastases are usually asymptomatic and are often found incidentally during staging."
+  },
+  {
+    "prompt": "How are adrenal lesions in lung cancer evaluated for malignancy?",
+    "completion": "Positron emission tomography (PET) scans are used to differentiate benign from malignant adrenal lesions."
+  },
+  {
+    "prompt": "What percentage of small cell lung cancer patients have brain metastases at diagnosis?",
+    "completion": "Brain metastases are present in 20 to 30% of SCLC patients at diagnosis."
+  },
+  {
+    "prompt": "Which metastatic site in lung cancer is often only symptomatic in advanced disease?",
+    "completion": "Liver metastasis is usually asymptomatic and presents only in advanced disease."
+  },
+  {
+    "prompt": "What clinical signs might suggest brain metastasis from lung cancer?",
+    "completion": "Stroke-like symptoms may suggest brain metastasis from lung cancer."
+  },
+  {
+    "prompt": "What non-specific symptom might indicate post-obstructive pneumonia in lung cancer?",
+    "completion": "A persistent cough, especially in the presence of exophytic bronchial masses, may indicate post-obstructive pneumonia."
+  },
+
+
+  {
+    "prompt": "What paraneoplastic syndrome causes hypercalcemia in lung cancer?",
+    "completion": "Hypercalcemia in lung cancer can result from secretion of parathyroid hormone-related protein or from extensive bony metastases."
+  },
+  {
+    "prompt": "Which symptoms indicate hypercalcemia in lung cancer patients?",
+    "completion": "Symptoms of hypercalcemia include anorexia, nausea, constipation, and lethargy."
+  },
+  {
+    "prompt": "Which type of lung cancer is most commonly associated with SIADH?",
+    "completion": "SIADH is most commonly associated with small cell lung cancer (SCLC)."
+  },
+  {
+    "prompt": "What neurologic paraneoplastic syndromes are associated with SCLC?",
+    "completion": "Neurologic paraneoplastic syndromes include Lambert-Eaton myasthenic syndrome, encephalomyelitis, limbic encephalitis, cerebellar ataxia, sensory neuropathy, and autonomic neuropathy."
+  },
+  {
+    "prompt": "What causes Cushing syndrome in lung cancer patients?",
+    "completion": "Cushing syndrome may result from ectopic ACTH production, especially in SCLC, large cell neuroendocrine carcinoma, and carcinoid tumors."
+  },
+  {
+    "prompt": "What are extrapulmonary manifestations of lung cancer besides paraneoplastic syndromes?",
+    "completion": "Extrapulmonary manifestations include hypertrophic pulmonary osteoarthropathy, dermatomyositis, and polymyositis."
+  },
+  {
+    "prompt": "What percentage of lung cancers are non-small cell lung cancer (NSCLC)?",
+    "completion": "Non-small cell lung cancer accounts for approximately 85% of all lung cancer cases."
+  },
+  {
+    "prompt": "What is the goal of initial lung cancer evaluation according to ACCP?",
+    "completion": "The goal is timely diagnosis and accurate staging, ideally within six weeks if the patient has tolerable symptoms and no complications."
+  },
+  {
+    "prompt": "What are the five key goals of initial lung cancer evaluation?",
+    "completion": "The goals include determining clinical stage, identifying the optimal biopsy site and method, histologic subtype, co-morbidities including paraneoplastic syndromes, and patient preferences."
+  },
+  {
+    "prompt": "What imaging test is recommended first for suspected lung cancer?",
+    "completion": "Contrast-enhanced CT of the chest extended to the upper abdomen up to the adrenal glands is recommended first."
+  },
+  {
+    "prompt": "When is PET or PET-CT imaging recommended in lung cancer?",
+    "completion": "PET or PET-CT is recommended when CT shows advanced disease or symptoms/focal findings suggest metastasis."
+  },
+  {
+    "prompt": "What is the sensitivity and specificity of CT scans for lung cancer staging?",
+    "completion": "CT has a sensitivity of 55% and specificity of 81% for identifying malignant lymph nodes."
+  },
+  {
+    "prompt": "How does the ACCP define a suspicious lymph node on CT scan?",
+    "completion": "Lymph nodes ≥1 cm in short axis are considered suspicious for malignancy."
+  },
+  {
+    "prompt": "What does CT scan help identify in lung cancer evaluation?",
+    "completion": "CT helps identify tumor size, anatomical location, atelectasis, post-obstructive pneumonitis, metastatic disease, and coexisting lung disease."
+  },
+  {
+    "prompt": "What defines Group A in the ACCP lung cancer radiologic staging?",
+    "completion": "Group A includes patients with bulky tumors invading mediastinum where lymph nodes cannot be separated from the tumor, and no nodal sampling is needed."
+  },
+  {
+    "prompt": "What defines Group B in the ACCP lung cancer radiologic staging?",
+    "completion": "Group B includes patients with discrete lymph nodes >1 cm, requiring pathologic confirmation before curative therapy."
+  },
+  {
+    "prompt": "What defines Group C in the ACCP lung cancer radiologic staging?",
+    "completion": "Group C includes patients with central tumors and high risk of N2/N3 disease, requiring nodal sampling even if CT/PET is negative."
+  },
+  {
+    "prompt": "What defines Group D in the ACCP lung cancer radiologic staging?",
+    "completion": "Group D includes patients with low risk of N2/N3 disease or metastatic disease, where invasive testing is usually not required unless N1 is suspected."
+  },
+  {
+    "prompt": "What is the main advantage of PET over CT in lung cancer staging?",
+    "completion": "PET provides better metabolic assessment and reduces futile surgeries by detecting distant metastases."
+  },
+  {
+    "prompt": "What are limitations of PET scan in lung cancer?",
+    "completion": "PET scan can produce false positives in infections/inflammation and false negatives in carcinoid tumors or small low-metabolic lesions."
+  },
+  {
+    "prompt": "Can a positive PET scan replace lymph node sampling in lung cancer?",
+    "completion": "No, except in Group A disease, positive PET scan still requires nodal sampling to confirm staging."
+  },
+
+
+  {
+    "prompt": "What is the main function of PET scanning in lung cancer?",
+    "completion": "PET scanning assesses the metabolic activity of the primary tumor, mediastinal involvement, and distant metastases."
+  },
+  {
+    "prompt": "What is a key advantage of integrated PET/CT scanners?",
+    "completion": "Integrated PET/CT scanners eliminate anatomical uncertainty by combining metabolic and anatomic imaging."
+  },
+  {
+    "prompt": "How has PET scanning reduced unnecessary surgeries in lung cancer?",
+    "completion": "PET scanning reduces futile thoracotomies by accurately identifying distant metastases and ruling out surgical candidates."
+  },
+  {
+    "prompt": "In what post-treatment setting is PET scan helpful for lung cancer patients?",
+    "completion": "PET scan helps differentiate tumor recurrence from metabolic changes following radiation therapy."
+  },
+  {
+    "prompt": "What conditions may lead to a false positive PET scan?",
+    "completion": "False positives may occur due to infection, inflammation, or recent lymph node sampling, all of which increase glycolysis."
+  },
+  {
+    "prompt": "What factors can cause a false negative PET scan?",
+    "completion": "False negatives can occur with carcinoid tumors, some adenocarcinomas, low-metabolic lesions, or poor blood flow."
+  },
+  {
+    "prompt": "What are the sensitivity and specificity of PET scan in lung cancer staging?",
+    "completion": "PET scan has a sensitivity of 80% and specificity of 88% for lung cancer staging."
+  },
+  {
+    "prompt": "Is PET scanning alone sufficient to stage lung cancer?",
+    "completion": "No, PET scan alone is not sufficient; lymph node sampling is still required for accurate staging except in Group A cases."
+  },
+  {
+    "prompt": "What is the ACCP’s stance on PET scans replacing nodal sampling?",
+    "completion": "The ACCP recommends that PET scan does not replace lymph node sampling, except in Group A patients with bulky mediastinal disease."
+  },
+  {
+    "prompt": "Why is PET scan preferred over CT in identifying metastasis?",
+    "completion": "PET scan is preferred because it provides functional imaging that reveals metabolic activity, improving detection of occult metastases."
+  },
+
+
+  {
+    "prompt": "What is the primary purpose of invasive staging in lung cancer?",
+    "completion": "Invasive staging is used to obtain tissue confirmation of malignancy, confirm staging, and determine histological subtype."
+  },
+  {
+    "prompt": "What procedures are used for invasive staging in lung cancer?",
+    "completion": "Invasive staging techniques include endobronchial ultrasound-transbronchial needle aspiration (EBUS-TBNA), endoscopic TBNA, mediastinoscopy, thoracoscopy, and video-assisted thoracoscopy (VATS)."
+  },
+  {
+    "prompt": "What is CP-EBUS in the context of lung cancer staging?",
+    "completion": "CP-EBUS stands for convex probe endobronchial ultrasound-guided transbronchial needle aspiration, used to biopsy mediastinal and hilar lymph nodes."
+  },
+  {
+    "prompt": "What does RP-EBUS refer to in invasive lung cancer diagnosis?",
+    "completion": "RP-EBUS refers to radial probe endobronchial ultrasound, used for peripheral pulmonary lesions."
+  },
+  {
+    "prompt": "When is a CT-guided transthoracic biopsy preferred?",
+    "completion": "CT-guided transthoracic biopsy is preferred for peripheral lung lesions, especially when the risk of pneumothorax is low."
+  },
+  {
+    "prompt": "What older surgical procedure might be used in rare cases for staging lung cancer?",
+    "completion": "The Chamberlain procedure, a surgical mediastinal lymph node biopsy, may be used in select cases."
+  },
+  {
+    "prompt": "What is navigation bronchoscopy used for in lung cancer evaluation?",
+    "completion": "Navigation bronchoscopy is used to access and biopsy peripheral or difficult-to-reach lung nodules using 3D guidance systems."
+  },
+  {
+    "prompt": "Which minimally invasive procedure helps assess mediastinal lymph nodes?",
+    "completion": "Endobronchial ultrasound-guided TBNA (EBUS-TBNA) is commonly used to assess mediastinal lymph nodes."
+  },
+  {
+    "prompt": "What role does video-assisted thoracoscopy (VATS) play in lung cancer staging?",
+    "completion": "VATS allows for direct visualization and biopsy of pleural and lung tissue, aiding in staging and diagnosis."
+  },
+  {
+    "prompt": "Why is mediastinoscopy used in lung cancer staging?",
+    "completion": "Mediastinoscopy provides direct access to mediastinal lymph nodes for biopsy to confirm nodal involvement."
+  },
+
+
+
+  {
+    "prompt": "What does CP-EBUS stand for in bronchoscopy?",
+    "completion": "CP-EBUS stands for convex probe-endobronchial ultrasound bronchoscopy."
+  },
+  {
+    "prompt": "What is the frequency of the ultrasound probe used in CP-EBUS?",
+    "completion": "CP-EBUS uses a 7.5 MHz convex ultrasound probe."
+  },
+  {
+    "prompt": "What is the primary purpose of CP-EBUS?",
+    "completion": "CP-EBUS is primarily used to sample mediastinal and hilar lymph nodes in real time."
+  },
+  {
+    "prompt": "Which lymph node stations can CP-EBUS access?",
+    "completion": "CP-EBUS can access upper and lower paratracheal nodes and stations 10, 11, and 12."
+  },
+  {
+    "prompt": "Which lymph node stations cannot be accessed by CP-EBUS?",
+    "completion": "CP-EBUS cannot access stations 3, 5, and 6."
+  },
+  {
+    "prompt": "Why is Doppler imaging used during CP-EBUS?",
+    "completion": "Doppler imaging is used to identify blood vessels and avoid vascular injury during biopsy."
+  },
+  {
+    "prompt": "What is a key application of CP-EBUS after induction chemotherapy?",
+    "completion": "CP-EBUS is used to confirm complete remission before surgery after induction chemotherapy."
+  },
+  {
+    "prompt": "How does RP-EBUS differ from CP-EBUS?",
+    "completion": "RP-EBUS uses a higher frequency probe (20–30 MHz), offers a 360-degree lung view, and targets smaller peripheral lesions but does not allow real-time biopsy."
+  },
+  {
+    "prompt": "What is the main advantage of RP-EBUS?",
+    "completion": "RP-EBUS can reach smaller and more peripheral lung lesions and provides a 360-degree view of the parenchyma."
+  },
+  {
+    "prompt": "What is a key limitation of RP-EBUS?",
+    "completion": "Real-time biopsy cannot be performed with RP-EBUS."
+  },
+  {
+    "prompt": "What is the concept behind navigation bronchoscopy?",
+    "completion": "Navigation bronchoscopy creates a 3D map of airways using CT or electromagnetic fields to guide the bronchoscopist to the target lesion."
+  },
+  {
+    "prompt": "What imaging is used to plan a pathway in navigation bronchoscopy?",
+    "completion": "CT scans or electromagnetic field mapping is used to create a navigational pathway."
+  },
+  {
+    "prompt": "What is endoscopic TBNA also known as?",
+    "completion": "Endoscopic TBNA is also referred to as endoscopic ultrasound (EUS)-guided TBNA."
+  },
+  {
+    "prompt": "Which lymph node stations are accessible via endoscopic-TBNA (EUS)?",
+    "completion": "EUS can sample lymph node stations 2, 4, 7, 8, and 9."
+  },
+  {
+    "prompt": "Which lymph node stations are not accessible via EBUS but accessible via EUS?",
+    "completion": "Stations 8 and 9 can be accessed by EUS but not by EBUS."
+  },
+  {
+    "prompt": "What is the sensitivity and specificity of endoscopic-TBNA?",
+    "completion": "Endoscopic-TBNA has a sensitivity of 89% and a specificity of 100%."
+  },
+  {
+    "prompt": "Why is a combined EBUS and EUS approach recommended for lung cancer staging?",
+    "completion": "Combining EBUS and EUS increases lymph node coverage and offers a comprehensive, minimally invasive staging strategy."
+  },
+
+
+  {
+    "prompt": "What is the primary clinical indication for mediastinoscopy in lung cancer staging?",
+    "completion": "Mediastinoscopy is used when needle-based techniques are negative but clinical suspicion of malignancy remains due to lymph node size or PET uptake."
+  },
+  {
+    "prompt": "Which lymph nodes are typically accessed during standard mediastinoscopy?",
+    "completion": "Standard mediastinoscopy typically samples paratracheal lymph nodes."
+  },
+  {
+    "prompt": "What is the anterior mediastinoscopy (Chamberlain procedure) used for?",
+    "completion": "The Chamberlain procedure is used to access subaortic and para-aortic lymph nodes, corresponding to stations 5 and 6."
+  },
+  {
+    "prompt": "What is the sensitivity and specificity of mediastinoscopy?",
+    "completion": "Mediastinoscopy has a sensitivity of 78% and a specificity of 100%."
+  },
+  {
+    "prompt": "What is the mortality risk associated with mediastinoscopy?",
+    "completion": "The mortality risk of mediastinoscopy is approximately 0.08%."
+  },
+  {
+    "prompt": "Why is general anesthesia required for mediastinoscopy?",
+    "completion": "Mediastinoscopy is a surgical procedure requiring airway control and precise dissection near vital structures, necessitating general anesthesia."
+  },
+  {
+    "prompt": "What is thoracoscopy traditionally, and what has replaced it?",
+    "completion": "Thoracoscopy traditionally involved opening the chest cavity, but it has been replaced by minimally invasive video-assisted thoracoscopic surgery (VATS)."
+  },
+  {
+    "prompt": "What procedures can be performed using VATS in lung cancer management?",
+    "completion": "VATS allows mediastinal lymph node biopsy, full dissection during lung resection, and treatment of pleural, pulmonary, and chest wall conditions."
+  },
+  {
+    "prompt": "What is RATS in thoracic surgery?",
+    "completion": "RATS stands for robotic-assisted thoracoscopy, a newer version of VATS using robotic instruments for improved precision."
+  },
+  {
+    "prompt": "Are there trials comparing VATS and RATS for mediastinal lymph node sampling?",
+    "completion": "No, there are currently no trials directly comparing VATS and RATS for mediastinal lymph node biopsy."
+  },
+
+
+  {
+    "prompt": "What is the treatment of choice for Stage I non-small cell lung cancer (NSCLC)?",
+    "completion": "Surgery is the mainstay of treatment for Stage I NSCLC, typically via lobectomy or pneumonectomy with mediastinal lymph node sampling."
+  },
+  {
+    "prompt": "What is the 5-year survival rate for Stage IA NSCLC?",
+    "completion": "The 5-year survival rate for Stage IA NSCLC is approximately 78%."
+  },
+  {
+    "prompt": "What is the 5-year survival rate for Stage IB NSCLC?",
+    "completion": "The 5-year survival rate for Stage IB NSCLC is approximately 53%."
+  },
+  {
+    "prompt": "What surgical options exist for patients who cannot tolerate lobectomy or pneumonectomy?",
+    "completion": "Patients with limited pulmonary reserve may undergo wedge resection or segmentectomy as more conservative options."
+  },
+  {
+    "prompt": "What is a disadvantage of sublobar resection in Stage I NSCLC?",
+    "completion": "Sublobar resections like wedge or segmentectomy have a higher local recurrence rate compared to lobectomy."
+  },
+  {
+    "prompt": "Does conservative surgery affect survival in Stage I NSCLC?",
+    "completion": "No, despite a higher local recurrence rate, overall survival is similar between conservative and standard surgeries in Stage I NSCLC."
+  },
+  {
+    "prompt": "Is postoperative radiation therapy beneficial in Stage I NSCLC?",
+    "completion": "No, local postoperative radiation therapy has not shown a survival benefit in Stage I NSCLC."
+  },
+  {
+    "prompt": "Is adjuvant chemotherapy recommended for Stage I NSCLC?",
+    "completion": "Adjuvant chemotherapy has not been shown to improve outcomes in Stage I NSCLC."
+  },
+
+
+  {
+    "prompt": "What is the preferred treatment for Stage II NSCLC?",
+    "completion": "The preferred treatment for Stage II NSCLC is surgery followed by adjuvant chemotherapy."
+  },
+  {
+    "prompt": "What are the 5-year survival rates for Stage IIA and IIB NSCLC?",
+    "completion": "The 5-year survival rate is 46% for Stage IIA and 36% for Stage IIB NSCLC."
+  },
+  {
+    "prompt": "What surgical approach is recommended for NSCLC invading the chest wall?",
+    "completion": "En-bloc resection of the chest wall is recommended when the tumor invades the chest wall."
+  },
+  {
+    "prompt": "What is a Pancoast tumor?",
+    "completion": "A Pancoast tumor is a lung cancer arising from the superior sulcus, typically diagnosed at Stage IIB or IIIA."
+  },
+  {
+    "prompt": "What is the standard treatment approach for Pancoast tumors?",
+    "completion": "The standard treatment for Pancoast tumors is neoadjuvant chemotherapy with cisplatin and etoposide along with concurrent radiotherapy, followed by surgical resection."
+  },
+  {
+    "prompt": "Which chemotherapy drugs are commonly used in neoadjuvant therapy for Pancoast tumors?",
+    "completion": "Cisplatin and etoposide are commonly used in neoadjuvant chemotherapy for Pancoast tumors."
+  },
+  {
+    "prompt": "What is the survival range for patients with resected Pancoast tumors?",
+    "completion": "The overall survival for patients with Pancoast tumors ranges from 44% to 54%, depending on the presence or absence of microscopic disease in the resected specimen."
+  },
+
+
+
+  {
+    "prompt": "What is the preferred treatment for Stage IIIA NSCLC with N1 lymph node involvement?",
+    "completion": "Surgery with curative intent is the treatment of choice for Stage IIIA NSCLC with N1 lymph node involvement."
+  },
+  {
+    "prompt": "What is the current consensus for Stage IIIA NSCLC patients found to have N2 lymph node involvement at resection?",
+    "completion": "The consensus is to perform surgery followed by adjuvant chemotherapy for Stage IIIA NSCLC patients with N2 lymph node involvement."
+  },
+  {
+    "prompt": "What treatment is recommended for Stage IIIA NSCLC patients with N2 or N3 lymph node disease and good performance status?",
+    "completion": "Concurrent chemoradiotherapy offers the best outcome for Stage IIIA NSCLC patients with N2/N3 lymph node disease who have good performance status and no weight loss."
+  },
+  {
+    "prompt": "What are common side effects and tolerance concerns associated with concurrent chemoradiotherapy in Stage III NSCLC?",
+    "completion": "Concurrent chemoradiotherapy is not well tolerated by all patients and can cause severe esophagitis."
+  },
+  {
+    "prompt": "What is the five-year survival rate for Stage III NSCLC after concurrent chemo-radiotherapy?",
+    "completion": "The five-year survival rate for Stage III NSCLC after concurrent chemo-radiotherapy is approximately 20%."
+  },
+  {
+    "prompt": "How are T4 NSCLC tumors usually treated?",
+    "completion": "T4 tumors are usually treated exclusively with chemoradiation."
+  },
+  {
+    "prompt": "When might surgery be an option for T4 NSCLC tumors?",
+    "completion": "Surgery may be considered in T4 N0-1 tumors with carinal involvement."
+  },
+  {
+    "prompt": "What is the operative mortality and approximate survival rate after carinal resection for T4 NSCLC?",
+    "completion": "Operative mortality after carinal resection is 10% to 15%, with an approximate survival rate of 20%."
+  },
+  {
+    "prompt": "What is the prognosis for T4 tumors with ipsilateral nonprimary lobe nodules and no mediastinal involvement treated with surgery alone?",
+    "completion": "Surgery alone in T4 tumors with ipsilateral nonprimary lobe nodules and no mediastinal involvement offers a five-year survival rate of about 20%."
+  },
+  {
+    "prompt": "How are Stage IIIB NSCLC tumors generally treated?",
+    "completion": "Stage IIIB NSCLC tumors are treated similarly to unresectable Stage IIIA cancers, primarily with concurrent chemoradiotherapy."
+  },
+  {
+    "prompt": "Is surgery an option for Stage IIIB NSCLC after induction chemo-radiotherapy?",
+    "completion": "In select Stage IIIB NSCLC patients, surgery may be considered after induction chemo-radiotherapy."
+  },
+  {
+    "prompt": "Why is the exact survival rate of Stage IIIB NSCLC unclear?",
+    "completion": "Survival data for Stage IIIB NSCLC is unclear because trials have included both inoperable Stage IIIA and Stage IIIB patients together."
+  },
+
+
+  {
+    "prompt": "Is Stage IV NSCLC considered curable?",
+    "completion": "No, Stage IV NSCLC is considered incurable; treatment aims to improve survival and relieve symptoms."
+  },
+  {
+    "prompt": "What percentage of Stage IV NSCLC patients typically respond to chemotherapy?",
+    "completion": "Only about 10% to 30% of Stage IV NSCLC patients respond to chemotherapy."
+  },
+  {
+    "prompt": "What is the five-year survival rate for patients with Stage IV NSCLC?",
+    "completion": "Only 1% to 3% of patients with Stage IV NSCLC survive five years after diagnosis."
+  },
+  {
+    "prompt": "What chemotherapy regimens are offered to Stage IV NSCLC patients?",
+    "completion": "Single or double drug-based chemotherapy is offered to Stage IV NSCLC patients with good functional performance status."
+  },
+  {
+    "prompt": "What is the survival benefit of chemotherapy in Stage IV NSCLC?",
+    "completion": "Chemotherapy offers a small survival benefit in Stage IV NSCLC."
+  },
+  {
+    "prompt": "Which Stage IV NSCLC patients might benefit from bevacizumab therapy?",
+    "completion": "Highly selected patients with non-squamous NSCLC without brain metastasis or hemoptysis may benefit from the addition of bevacizumab."
+  },
+  {
+    "prompt": "What is the mechanism of action of bevacizumab in NSCLC treatment?",
+    "completion": "Bevacizumab is a vascular endothelial growth factor (VEGF) inhibitor that targets tumor angiogenesis."
+  },
+
+
+  {
+    "prompt": "What are 'driver mutations' in NSCLC?",
+    "completion": "Driver mutations are specific genetic alterations that encode critical proteins responsible for cell growth and replication in NSCLC."
+  },
+  {
+    "prompt": "Why is it important to test for driver mutations in advanced NSCLC?",
+    "completion": "Testing for driver mutations in advanced NSCLC is important because targeted inhibitors are available for these mutations, which can improve patient survival."
+  },
+  {
+    "prompt": "Which mutation is targeted by the tyrosine kinase inhibitors erlotinib, gefitinib, and afatinib?",
+    "completion": "The epidermal growth factor receptor (EGFR) mutation is targeted by the tyrosine kinase inhibitors erlotinib, gefitinib, and afatinib."
+  },
+  {
+    "prompt": "Name the inhibitors used for ALK mutation in NSCLC.",
+    "completion": "Crizotinib, ceritinib, and alectinib are specific inhibitors used to target the ALK mutation in NSCLC."
+  },
+  {
+    "prompt": "What is ROS-1 mutation and how is it treated in NSCLC?",
+    "completion": "ROS-1 is a mutation structurally similar to ALK and is treated with crizotinib, which is FDA approved for cancers expressing ROS-1 mutation."
+  },
+
+
+  {
+    "prompt": "What is the basic mechanism of action of immunotherapy in NSCLC?",
+    "completion": "Immunotherapy boosts the immune system, helping it recognize cancer cells as foreign and increases their responsiveness against tumors."
+  },
+  {
+    "prompt": "How do malignant cells evade the immune system via checkpoints?",
+    "completion": "Malignant cells co-opt immune checkpoints such as PD-1, creating tolerance in the immune system and rendering it less effective against tumor cells."
+  },
+  {
+    "prompt": "What role does PD-1 play in immune regulation?",
+    "completion": "PD-1 down-regulates T-cells and promotes self-tolerance, but its interaction with PD-L1 or PD-L2 inactivates activated T-cells, decreasing immune response to tumors."
+  },
+  {
+    "prompt": "Which immune checkpoints are currently targeted by approved antibodies in NSCLC?",
+    "completion": "Antibodies targeting PD-1 and its ligand PD-L1 are currently approved for immunotherapy in NSCLC."
+  },
+  {
+    "prompt": "What is nivolumab and its approved use in NSCLC?",
+    "completion": "Nivolumab is an IgG4 monoclonal antibody against PD-1 approved for squamous and non-squamous NSCLC that has progressed after platinum-based chemotherapy, usable regardless of PD-L1 expression levels."
+  },
+  {
+    "prompt": "How is pembrolizumab used in NSCLC treatment?",
+    "completion": "Pembrolizumab is an IgG4 monoclonal antibody against PD-1 approved for metastatic NSCLC with PD-L1 expression >50%, no EGFR or ALK mutations, and is combined with chemotherapy for non-squamous NSCLC with <50% PD-L1 expression."
+  },
+  {
+    "prompt": "Describe atezolizumab’s mechanism and indications in NSCLC.",
+    "completion": "Atezolizumab is an IgG1 antibody against PD-L1 approved for metastatic, progressive NSCLC during or after platinum-based chemotherapy, including patients with EGFR and ALK mutations who failed targeted therapy."
+  },
+  {
+    "prompt": "Is bevacizumab considered an immunotherapy agent in NSCLC?",
+    "completion": "No, bevacizumab is an anti-angiogenesis antibody targeting VEGF-A, primarily used with chemotherapy for non-squamous NSCLC and is contraindicated in squamous cell NSCLC."
+  },
+  {
+    "prompt": "Why is bevacizumab contraindicated in squamous cell NSCLC?",
+    "completion": "Bevacizumab is contraindicated in squamous cell NSCLC due to the risk of severe and often fatal hemoptysis."
+  },
+
+
+  {
+    "prompt": "How does small cell lung cancer (SCLC) typically respond to chemotherapy?",
+    "completion": "SCLC is highly sensitive to chemotherapy but has a very high recurrence rate."
+  },
+  {
+    "prompt": "What is the treatment for Stage I limited-stage SCLC presenting as a peripheral nodule without lymphadenopathy?",
+    "completion": "The treatment is lobectomy followed by adjuvant chemotherapy."
+  },
+  {
+    "prompt": "What must be done before confirming limited-stage SCLC without lymphadenopathy?",
+    "completion": "PET-CT followed by lymph node sampling via EBUS bronchoscopy or mediastinoscopy should be performed to rule out nodal involvement, even if PET-CT is negative."
+  },
+  {
+    "prompt": "What is the standard treatment for LS-SCLC with mediastinal or hilar lymph node involvement?",
+    "completion": "The standard treatment is 4 to 6 cycles of chemotherapy followed by radiation therapy."
+  },
+  {
+    "prompt": "Why is radiation therapy used in limited-stage SCLC with nodal involvement?",
+    "completion": "Radiation therapy is used because up to 80% of SCLC recurs locally without it."
+  },
+  {
+    "prompt": "What are the treatment options for chemotherapy and radiation in LS-SCLC?",
+    "completion": "Options include concurrent chemo-radiotherapy, alternating therapy, and sequential therapy. Concurrent/alternate approaches offer better outcomes but are more toxic, while sequential therapy is better tolerated."
+  },
+  {
+    "prompt": "What additional therapy is used in patients with LS-SCLC who achieve remission?",
+    "completion": "Prophylactic whole-brain radiation is used to reduce symptomatic brain metastases and improve survival."
+  },
+
+
+  {
+    "prompt": "What defines extensive-stage small cell lung cancer (ES-SCLC)?",
+    "completion": "ES-SCLC includes distant metastasis, malignant pleural or pericardial effusions, and contralateral hilar or supraclavicular lymph node involvement."
+  },
+  {
+    "prompt": "What is the standard treatment for ES-SCLC?",
+    "completion": "Platinum-based chemotherapy is the standard treatment for ES-SCLC."
+  },
+  {
+    "prompt": "What percentage of ES-SCLC patients show remission after chemotherapy?",
+    "completion": "Approximately 50% to 60% of ES-SCLC patients show remission after platinum-based chemotherapy."
+  },
+  {
+    "prompt": "What additional therapies are recommended after remission in ES-SCLC?",
+    "completion": "Radiation therapy followed by prophylactic whole-brain irradiation is recommended after remission."
+  },
+  {
+    "prompt": "What is the median survival of patients diagnosed with ES-SCLC?",
+    "completion": "The median survival for ES-SCLC patients is approximately 8 to 13 months from diagnosis."
+  },
+  {
+    "prompt": "What is the two-year survival rate for ES-SCLC patients?",
+    "completion": "Only about 5% of ES-SCLC patients survive two years after diagnosis."
+  },
+
+
+  {
+    "prompt": "What are some conditions that may mimic the presentation of lung cancer?",
+    "completion": "Conditions that can mimic lung cancer include bacterial pneumonia, bronchitis, mycoplasmal pneumonia, pleural effusion, pneumothorax, tuberculosis, viral pneumonia, and fungal pneumonia."
+  },
+  {
+    "prompt": "Which infectious diseases should be considered in the differential diagnosis of a lung mass?",
+    "completion": "Infectious diseases to consider include bacterial pneumonia, tuberculosis, viral pneumonia, fungal pneumonia, and mycoplasmal pneumonia."
+  },
+  {
+    "prompt": "What pulmonary conditions may cause symptoms similar to lung cancer such as cough and chest pain?",
+    "completion": "Pulmonary conditions with similar symptoms include bronchitis, pneumothorax, and pleural effusion."
+  },
+  {
+    "prompt": "Can tuberculosis be misdiagnosed as lung cancer?",
+    "completion": "Yes, tuberculosis can mimic lung cancer clinically and radiologically and must be included in the differential diagnosis."
+  },
+  {
+    "prompt": "Why is mycoplasmal pneumonia a potential differential diagnosis for lung cancer?",
+    "completion": "Mycoplasmal pneumonia can cause chronic cough and infiltrates on imaging, which may resemble lung cancer."
+  },
+
+
+  {
+    "prompt": "Why is staging crucial after a lung cancer diagnosis?",
+    "completion": "Staging is essential because it guides treatment decisions, impacts prognosis and survival, and determines whether surgery or palliative care is appropriate."
+  },
+  {
+    "prompt": "What is the standard system used for staging non-small cell lung cancer (NSCLC)?",
+    "completion": "The Tumor, Node, Metastasis (TNM) classification system is the internationally accepted standard for staging NSCLC."
+  },
+  {
+    "prompt": "Which edition of the TNM classification is currently in use for lung cancer staging?",
+    "completion": "The 8th edition of the TNM classification is currently in use for lung cancer staging, effective in the U.S. since January 1, 2018."
+  },
+  {
+    "prompt": "Which organization led the development of the 8th edition of TNM staging for lung cancer?",
+    "completion": "The 8th edition was developed by the International Association for the Study of Lung Cancer (IASLC)."
+  },
+  {
+    "prompt": "How many countries contributed data to the 8th edition TNM staging system for lung cancer?",
+    "completion": "Data from 16 countries and approximately 95,000 patients were analyzed to develop the 8th edition TNM system."
+  },
+  {
+    "prompt": "What does T0 mean in lung cancer staging?",
+    "completion": "T0 means no evidence of a primary tumor."
+  },
+  {
+    "prompt": "What is Tis in lung cancer staging?",
+    "completion": "Tis represents carcinoma in situ, a non-invasive tumor confined to the epithelium."
+  },
+  {
+    "prompt": "What are the subcategories of T1 tumors in lung cancer?",
+    "completion": "T1 tumors are less than 3 cm and include: T1mi (minimally invasive), T1a (superficial), T1a (<1 cm), T1b (1–2 cm), and T1c (2–3 cm)."
+  },
+  {
+    "prompt": "What tumor size defines a T2 lung tumor?",
+    "completion": "T2 tumors are greater than 3 cm but less than 5 cm in diameter."
+  },
+  {
+    "prompt": "Which anatomical features qualify a tumor as T2 even if the size is <5 cm?",
+    "completion": "A tumor involving the main bronchus (not at the carina), visceral pleura, or causing atelectasis extending to the hilum is also considered T2."
+  },
+  {
+    "prompt": "What defines a T3 tumor in lung cancer?",
+    "completion": "T3 tumors are 5–7 cm or invade the chest wall, pericardium, phrenic nerve, or have separate tumor nodules in the same lobe."
+  },
+  {
+    "prompt": "What size defines a T4 tumor in lung cancer?",
+    "completion": "T4 tumors are greater than 7 cm."
+  },
+  {
+    "prompt": "What anatomical invasions qualify a tumor as T4?",
+    "completion": "T4 tumors invade the heart, great vessels, esophagus, trachea, carina, mediastinum, vertebral body, recurrent laryngeal nerve, or diaphragm."
+  },
+  {
+    "prompt": "How did diaphragm involvement change from the 7th to the 8th TNM edition?",
+    "completion": "In the 8th edition, diaphragm invasion is classified as T4, whereas it was previously T3 in the 7th edition."
+  },
+  {
+    "prompt": "How are multiple tumor nodules classified in the TNM system?",
+    "completion": "Separate tumor nodules in the same lobe are T3, in a different ipsilateral lobe are T4, and in the contralateral lung are M1a."
+  },
+  {
+    "prompt": "Is the TNM system used for staging small cell lung cancer (SCLC)?",
+    "completion": "Although SCLC can be staged using TNM, it is commonly classified into limited-stage and extensive-stage disease for practical treatment purposes."
+  },
+
+
+  {
+    "prompt": "Why is lymph node staging critical before performing lung cancer surgery?",
+    "completion": "Lymph node staging is critical to determine if curative surgery is feasible, as lung resection carries high morbidity and should be avoided in unresectable disease."
+  },
+  {
+    "prompt": "Which lymph nodes are most relevant in differentiating lung cancer stages?",
+    "completion": "Mediastinal or N2 lymph nodes are most critical in differentiating lung cancer stages and influencing treatment options."
+  },
+  {
+    "prompt": "Who developed the first widely accepted thoracic lymph node map?",
+    "completion": "The first widely accepted thoracic lymph node map was developed by Naruke in the 1960s."
+  },
+  {
+    "prompt": "What were the two major lymph node classification systems in North America before standardization?",
+    "completion": "The American Thoracic Society (ATS) map and the American Joint Committee on Cancer (AJCC) map were the two main classification systems."
+  },
+  {
+    "prompt": "What was the Mountain-Dressler modification?",
+    "completion": "The Mountain-Dressler modification (MD-ATS map) was a unification of the ATS and AJCC maps, widely adopted in North America in 1996."
+  },
+  {
+    "prompt": "Which organization created the globally accepted lymph node map for lung cancer staging?",
+    "completion": "The International Association for the Study of Lung Cancer (IASLC) developed the globally accepted lymph node map for lung cancer staging."
+  },
+  {
+    "prompt": "How are thoracic lymph nodes broadly divided in lung cancer staging?",
+    "completion": "Thoracic lymph nodes are divided into mediastinal (N2) and hilar (N1) groups."
+  },
+  {
+    "prompt": "Which lymph node group has a greater impact on lung cancer staging and treatment decisions?",
+    "completion": "Mediastinal (N2) lymph nodes have a greater impact on staging and treatment decisions than hilar (N1) nodes."
+  },
+  {
+    "prompt": "What are the major groups of mediastinal lymph nodes per the IASLC map?",
+    "completion": "Mediastinal lymph nodes are divided into supraclavicular nodes (station 1), superior mediastinal nodes (stations 2–4), aortic nodes (station 5), and inferior mediastinal nodes (station 7–9)."
+  },
+  {
+    "prompt": "What is the classification of station 1 lymph nodes?",
+    "completion": "Station 1 lymph nodes refer to supraclavicular nodes."
+  },
+  {
+    "prompt": "Which stations are included in the superior mediastinal group of lymph nodes?",
+    "completion": "Superior mediastinal lymph nodes include stations 2, 3, and 4."
+  },
+  {
+    "prompt": "What does station 5 in the IASLC lymph node map represent?",
+    "completion": "Station 5 represents aortic nodes, which include subaortic lymph nodes (aortopulmonary window)."
+  },
+  {
+    "prompt": "What classification system is used globally today for thoracic lymph node staging in lung cancer?",
+    "completion": "The IASLC lymph node map is the most widely used global standard for thoracic lymph node staging in lung cancer."
+  },
+
+
+  {
+    "prompt": "What does station 1 in the IASLC lymph node map represent?",
+    "completion": "Station 1 includes lower cervical, supraclavicular, and sternal notch lymph nodes."
+  },
+  {
+    "prompt": "How is station 1 divided in the IASLC lymph node classification?",
+    "completion": "Station 1 is divided into 1R and 1L, based on the imaginary midline of the trachea."
+  },
+  {
+    "prompt": "What anatomical landmark separates 1R from 1L lymph nodes?",
+    "completion": "The imaginary midline of the trachea separates 1R from 1L; below station 1, the left tracheal border is used."
+  },
+  {
+    "prompt": "Which stations are part of the superior mediastinal lymph nodes in IASLC map?",
+    "completion": "Stations 2, 3, and 4 are categorized under superior mediastinal lymph nodes."
+  },
+  {
+    "prompt": "What does station 2R represent in the IASLC lymph node map?",
+    "completion": "Station 2R represents right upper paratracheal lymph nodes, from the upper manubrium to the caudal margin of the innominate vein, extending to the left lateral border of the trachea."
+  },
+  {
+    "prompt": "What does station 2L represent in the IASLC lymph node map?",
+    "completion": "Station 2L represents left upper paratracheal lymph nodes, from the upper border of the manubrium to the top of the aortic arch, located left of the left lateral tracheal border."
+  },
+  {
+    "prompt": "What does station 3A include in the IASLC lymph node map?",
+    "completion": "Station 3A includes pre-vascular lymph nodes located anterior to great vessels but not adjacent to the trachea."
+  },
+  {
+    "prompt": "What does station 3P include in the IASLC lymph node map?",
+    "completion": "Station 3P includes pre-vertebral lymph nodes located behind the esophagus and not adjacent to the trachea."
+  },
+  {
+    "prompt": "What does station 4R represent in the IASLC lymph node map?",
+    "completion": "Station 4R represents right lower paratracheal lymph nodes from the caudal margin of the innominate vein to the lower border of the azygos vein, spanning the trachea."
+  },
+  {
+    "prompt": "What does station 4L represent in the IASLC lymph node map?",
+    "completion": "Station 4L represents left lower paratracheal lymph nodes from the upper margin of the aortic arch to the upper rim of the left pulmonary artery."
+  },
+
+
+  {
+    "prompt": "What does station 5 in the IASLC lymph node map represent?",
+    "completion": "Station 5 represents sub-aortic lymph nodes located lateral to the aorta and pulmonary trunk in the aortopulmonary (AP) window."
+  },
+  {
+    "prompt": "What does station 6 in the IASLC lymph node map represent?",
+    "completion": "Station 6 represents para-aortic lymph nodes lying anterior and lateral to the ascending aorta and the aortic arch."
+  },
+  {
+    "prompt": "What does station 7 in the IASLC lymph node map represent?",
+    "completion": "Station 7 includes sub-carinal lymph nodes extending from the carina to the lower border of the bronchus intermedius on the right and upper border of the lower lobe bronchus on the left."
+  },
+  {
+    "prompt": "What does station 8 in the IASLC lymph node map represent?",
+    "completion": "Station 8 includes para-esophageal lymph nodes located adjacent to the esophageal wall on both right and left sides, below the carina."
+  },
+  {
+    "prompt": "What does station 9 in the IASLC lymph node map represent?",
+    "completion": "Station 9 includes lymph nodes located within the pulmonary ligament, extending from the inferior pulmonary vein to the diaphragm."
+  },
+
+
+
+  {
+    "prompt": "What does M0 indicate in lung cancer staging?",
+    "completion": "M0 indicates no distant metastasis."
+  },
+  {
+    "prompt": "What is the meaning of M1a in lung cancer staging?",
+    "completion": "M1a indicates the presence of malignant pleural or pericardial effusion or malignant nodules within the thoracic cavity."
+  },
+  {
+    "prompt": "What does M1b signify in lung cancer staging?",
+    "completion": "M1b refers to a single extra-thoracic metastasis."
+  },
+  {
+    "prompt": "What does M1c represent in lung cancer staging?",
+    "completion": "M1c represents multiple extra-thoracic metastases."
+  },
+  {
+    "prompt": "What is the TNM classification for occult lung cancer?",
+    "completion": "Occult lung cancer is classified as TX N0 M0, meaning the primary tumor is not found, and there is no lymph node or distant metastasis."
+  },
+  {
+    "prompt": "What is Stage 0 in lung cancer staging?",
+    "completion": "Stage 0 is defined as Tis N0 M0, where the tumor is carcinoma in situ, with no lymph node or distant metastasis."
+  },
+  {
+    "prompt": "Describe Stage IA1 lung cancer TNM classification.",
+    "completion": "Stage IA1 includes T1mi or T1a tumors, with no lymph node (N0) or distant metastasis (M0)."
+  },
+  {
+    "prompt": "What is Stage IA2 in lung cancer staging?",
+    "completion": "Stage IA2 is defined by a T1b tumor with no lymph node involvement (N0) and no distant metastasis (M0)."
+  },
+  {
+    "prompt": "Describe the TNM classification for Stage IA3 lung cancer.",
+    "completion": "Stage IA3 includes T1c tumors with N0 and M0."
+  },
+  {
+    "prompt": "What does Stage IB represent in lung cancer TNM staging?",
+    "completion": "Stage IB is characterized by T2a tumors with no lymph node involvement (N0) and no distant metastasis (M0)."
+  },
+  {
+    "prompt": "What TNM features define Stage IIA lung cancer?",
+    "completion": "Stage IIA includes T2b tumors with N0 and M0."
+  },
+  {
+    "prompt": "Describe the TNM classification for Stage IIB lung cancer.",
+    "completion": "Stage IIB includes T1a, T1b, or T1c tumors with N1 and M0; T2a or T2b tumors with N1 and M0; and T3 tumors with N0 and M0."
+  },
+  {
+    "prompt": "What defines Stage IIIA lung cancer in TNM terms?",
+    "completion": "Stage IIIA consists of T1a, T2b, or T2c tumors with N2 and M0; T2a or T2b tumors with N2 and M0; T3 tumors with N1 and M0; and T4 tumors with N0 or N1 and M0."
+  },
+  {
+    "prompt": "What is the TNM classification for Stage IIIB lung cancer?",
+    "completion": "Stage IIIB includes T1a, T1b, or T1c tumors with N3 and M0; T2a or T2b tumors with N3 and M0; T3 tumors with N2 and M0; and T4 tumors with N2 and M0."
+  },
+  {
+    "prompt": "Describe Stage IIIC lung cancer in TNM staging.",
+    "completion": "Stage IIIC is characterized by T3 tumors with N3 and M0, and T4 tumors with N3 and M0."
+  },
+  {
+    "prompt": "What defines Stage IVA lung cancer in TNM terms?",
+    "completion": "Stage IVA includes any tumor size (Any T) and any nodal status (Any N) with M1a or M1b metastasis."
+  },
+  {
+    "prompt": "What is the TNM classification for Stage IVB lung cancer?",
+    "completion": "Stage IVB includes any tumor size (Any T) and any nodal involvement (Any N) with M1c metastasis."
+  },
+
+
+  {
+    "prompt": "Can SCLC be staged using the TNM system?",
+    "completion": "Yes, SCLC can be staged using the TNM system, but since SCLC is often systemic, a simpler staging classification has traditionally been used."
+  },
+  {
+    "prompt": "What are the two main stages of SCLC according to the Veterans Affairs Lung Study Group (VALSG)?",
+    "completion": "SCLC is classified into Limited Stage (LS-SCLC) and Extensive Stage (ES-SCLC) based on the VALSG classification."
+  },
+  {
+    "prompt": "What defines Limited Stage Small Cell Lung Cancer (LS-SCLC)?",
+    "completion": "LS-SCLC is confined to the ipsilateral hemithorax and local lymph nodes, including mediastinal, hilar, and supraclavicular nodes that can be encompassed within a single tolerable radiotherapy port. It corresponds approximately to TNM stages I through IIIB."
+  },
+  {
+    "prompt": "What defines Extensive Stage Small Cell Lung Cancer (ES-SCLC)?",
+    "completion": "ES-SCLC includes tumors that extend beyond the boundaries of limited disease, such as distant metastases, malignant pericardial or pleural effusions, contralateral supraclavicular lymph nodes, and contralateral hilar lymph node involvement."
+  },
+  {
+    "prompt": "Is the TNM staging system widely accepted for SCLC?",
+    "completion": "There is growing evidence that the TNM system may better define SCLC, but currently, there is no consensus on using it routinely for SCLC staging."
+  },
+
+
+  {
+    "prompt": "What is the most significant factor affecting prognosis in patients with NSCLC?",
+    "completion": "The TNM stage at presentation is the most significant factor impacting prognosis in patients with NSCLC."
+  },
+  {
+    "prompt": "How does a higher TNM stage affect the prognosis of NSCLC?",
+    "completion": "A higher TNM stage correlates with more advanced disease and poorer outcomes in NSCLC."
+  },
+  {
+    "prompt": "What other clinical factors are indicative of poor prognosis in NSCLC?",
+    "completion": "Poor performance status at diagnosis, anorexia, weight loss, and the presence of liver or skin metastases are indicative of poor prognosis in NSCLC."
+  },
+  {
+    "prompt": "Do EGFR mutations affect prognosis in NSCLC patients?",
+    "completion": "Yes, patients with activating EGFR mutations, especially in adenocarcinoma, have a better prognosis compared to those without these mutations."
+  },
+  {
+    "prompt": "What is the key prognostic factor for Small Cell Lung Cancer (SCLC)?",
+    "completion": "The extent of disease and stage at presentation are the most important prognostic factors for SCLC."
+  },
+  {
+    "prompt": "What are the five-year survival rates for limited-stage versus extensive-stage SCLC?",
+    "completion": "Patients with limited-stage SCLC have a five-year survival rate of 10 to 13%, whereas those with extensive-stage disease have a five-year survival rate of 1 to 2%."
+  },
+  {
+    "prompt": "Are performance status and weight loss prognostic factors in SCLC?",
+    "completion": "Yes, poor performance status and weight loss at the time of diagnosis are independent prognostic factors associated with decreased survival in SCLC."
+  },
+
+
+  {
+    "prompt": "What are some common complications in patients undergoing treatment for lung cancer?",
+    "completion": "Common complications include chemotherapy-induced nausea and vomiting, fatigue, anorexia, weight loss, anemia, neutropenia, nephrotoxicity, and neurotoxicities."
+  },
+  {
+    "prompt": "Which chemotherapy-related complication is especially common with cisplatin-based therapies?",
+    "completion": "Nephrotoxicity is especially common in patients receiving cisplatin-based therapies."
+  },
+  {
+    "prompt": "What hematologic complications are common in lung cancer treatment?",
+    "completion": "Anemia and neutropenia are common hematologic complications during lung cancer treatment."
+  },
+  {
+    "prompt": "What are some systemic symptoms experienced by lung cancer patients during treatment?",
+    "completion": "Fatigue, anorexia, and weight loss are common systemic symptoms in lung cancer patients undergoing treatment."
+  },
+  {
+    "prompt": "What neurotoxicities may occur as complications in lung cancer treatment?",
+    "completion": "Neurotoxicities can occur as side effects of lung cancer treatment, often related to certain chemotherapy agents."
+  },
+
+
+  {
+    "prompt": "What is the single most important preventive measure for lung cancer?",
+    "completion": "The single most important preventive measure is smoking cessation in all individuals."
+  },
+  {
+    "prompt": "What screening method is recommended for primary prevention of lung cancer in high-risk individuals?",
+    "completion": "Low-dose helical computed tomography (LDCT) is indicated for high-risk individuals for primary prevention."
+  },
+  {
+    "prompt": "Which age group benefits more from lung cancer screening using LDCT?",
+    "completion": "Smokers between the ages of 66 to 80 years benefit more from screening than those aged 55 to 64 years."
+  },
+  {
+    "prompt": "Do patients without a history of smoking benefit from lung cancer screening?",
+    "completion": "Patients without a history of smoking do not benefit from lung cancer screening."
+  },
+  {
+    "prompt": "What factors besides smoking history are considered in lung cancer risk models for screening?",
+    "completion": "Other factors include history of lung disease, family history of lung cancer, and asbestos exposure."
+  },
+  {
+    "prompt": "What are the current USPSTF guidelines (2021) for lung cancer screening?",
+    "completion": "The USPSTF recommends annual LDCT for patients aged 50 to 80 years with a ≥20 pack-year smoking history who currently smoke or quit within the past 15 years."
+  },
+
+
+  {
+    "prompt": "What therapeutic options play a role in managing pain and symptoms in terminal lung cancer patients?",
+    "completion": "Surgery, chemotherapy, and radiation all have roles in managing pain and other symptoms in terminal lung cancer patients."
+  },
+  {
+    "prompt": "When is surgery considered beneficial for palliative care in lung cancer patients?",
+    "completion": "Surgery is beneficial in patients with at least three months of expected survival and good performance status, especially with airway obstruction, hemoptysis, pleural or pericardial effusion, or brain or bone metastases."
+  },
+  {
+    "prompt": "What percentage of lung cancer patients experience central airway occlusion, and how is it managed?",
+    "completion": "Almost 30% of lung cancer patients experience central airway occlusion, managed with bronchoscopic laser destruction followed by stent placement for immediate relief."
+  },
+  {
+    "prompt": "How does chemotherapy help in palliative care for lung cancer?",
+    "completion": "Chemotherapy helps alleviate symptoms of pain and cough and may prolong survival."
+  },
+  {
+    "prompt": "What is the role of radiation therapy in palliative lung cancer care?",
+    "completion": "Palliative radiation provides symptomatic relief in 41% to 95% of lung cancer patients and plays a crucial role in alleviating pain due to brain and bone metastases."
+  },
+  {
+    "prompt": "What endoscopic treatment is used to control symptoms due to airway narrowing in lung cancer?",
+    "completion": "Endoscopic treatments such as brachytherapy help control symptoms due to airway narrowing."
+  },
+
+
+  {
+    "prompt": "Why do outcomes for lung cancer remain poor despite advances in treatment?",
+    "completion": "Most patients are diagnosed with advanced-stage disease, which significantly worsens outcomes."
+  },
+  {
+    "prompt": "What role do primary care providers and nurse practitioners play in lung cancer diagnosis?",
+    "completion": "They need to have a high suspicion of lung cancer in smokers and patients with occupational exposures and order appropriate imaging tests when indicated."
+  },
+  {
+    "prompt": "Who is responsible for making the definitive diagnosis and management plan for lung cancer?",
+    "completion": "The thoracic surgeon, in collaboration with the radiologist and pathologist, makes the definitive diagnosis and management plan."
+  },
+  {
+    "prompt": "What are the nursing responsibilities after lung cancer surgery?",
+    "completion": "Nurses monitor patients for oxygenation, ventilation, and pain, and remain vigilant for other comorbidities such as heart disease and peripheral vascular disease, communicating any abnormalities to the surgeon."
+  },
+  {
+    "prompt": "What role does the oncology nurse play in lung cancer treatment?",
+    "completion": "The oncology nurse educates patients about chemotherapy and radiation procedures and protocols during prolonged rehabilitation."
+  },
+  {
+    "prompt": "How does the oncology pharmacist contribute to lung cancer patient care?",
+    "completion": "Specialized oncology pharmacists educate patients about chemotherapeutic drugs, their benefits, and adverse effects, and consult with oncologists to tailor chemotherapy regimens based on patient response."
+  },
+  {
+    "prompt": "What population is currently recommended for lung cancer screening according to guidelines?",
+    "completion": "Men and women aged 55 years or older who have smoked 30 pack-years or more or quit smoking less than 15 years ago are recommended for lung cancer screening."
+  },
+  {
+    "prompt": "What screening method is used for lung cancer detection?",
+    "completion": "Low-dose helical CT scan of the chest, which takes less than 25 seconds, is used for lung cancer screening."
+  },
+  {
+    "prompt": "What is a major drawback of lung cancer screening with low-dose CT?",
+    "completion": "It can detect benign lesions, leading to unnecessary biopsies, surgeries, or prolonged radiological follow-up."
+  },
+  {
+    "prompt": "How can clinical outcomes in lung cancer be improved according to the passage?",
+    "completion": "Through close communication and collaboration within an interprofessional team that includes primary care providers, surgeons, radiologists, pathologists, nurses, and pharmacists."
   }
 ]
+
+
+  
 
 
 
