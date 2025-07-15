@@ -13,7 +13,7 @@ def load_data():
 data = load_data()
 
 # App title and description
-st.title("🧬 Atezolizumab Clinical Q&A Assistant")
+st.title("🧬 Cancer Adv Keyword Based Search")
 st.markdown("Ask questions about Atezolizumab trials, immune mechanisms, PD-L1, or clinical results.")
 
 # User input
