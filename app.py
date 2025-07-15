@@ -1,18 +1,20 @@
 import streamlit as st
 import json
-from difflib import get_close_matches
 import pandas as pd
 from datetime import datetime
+from collections import defaultdict
+
+# Initialize session state
+if 'search_history' not in st.session_state:
+    st.session_state.search_history = []
+if 'current_query' not in st.session_state:
+    st.session_state.current_query = ""
+if 'show_home' not in st.session_state:
+    st.session_state.show_home = True
 
 # Constants
 DATA_FILE = "cancer_clinical_dataset.json"
 DEFAULT_CUTOFF = 0.4
-
-# Initialize session state
-if 'search_input' not in st.session_state:
-    st.session_state.search_input = ""
-if 'last_query' not in st.session_state:
-    st.session_state.last_query = ""
 
 # Load and validate data with error handling
 @st.cache_data
@@ -46,174 +48,198 @@ def load_data():
         st.error(f"Error loading data: {str(e)}")
         return None
 
-# Enhanced fuzzy matching with multiple results
-def find_matches(question, dataset, cutoff=DEFAULT_CUTOFF, max_results=3):
-    prompts = [entry["prompt"] for entry in dataset]
-    matches = get_close_matches(question, prompts, n=max_results, cutoff=cutoff)
+# Keyword-based search with ranking
+def keyword_search(query, dataset):
+    query_words = set(word.lower() for word in query.split())
+    ranked_results = []
     
-    results = []
-    for match in matches:
-        for entry in dataset:
-            if entry.get("prompt") == match:
-                results.append(entry)
-                break
+    for entry in dataset:
+        prompt_words = set(word.lower() for word in entry["prompt"].split())
+        completion_words = set(word.lower() for word in entry["completion"].split())
+        
+        # Count matches in both prompt and completion
+        prompt_matches = len(query_words & prompt_words)
+        completion_matches = len(query_words & completion_words)
+        
+        # Higher weight for prompt matches
+        total_score = (prompt_matches * 2) + completion_matches
+        
+        if total_score > 0:
+            ranked_results.append({
+                "entry": entry,
+                "score": total_score,
+                "prompt_matches": prompt_matches,
+                "completion_matches": completion_matches
+            })
     
-    return results
+    # Sort by score (descending)
+    ranked_results.sort(key=lambda x: x["score"], reverse=True)
+    return ranked_results
 
 # Generate alternative suggestions
-def generate_suggestions(question, dataset):
-    # Extract keywords from question
-    keywords = set(question.lower().split())
-    stop_words = {"what", "how", "when", "why", "which", "where", "who"}
-    keywords = keywords - stop_words
+def generate_suggestions(query, dataset):
+    query_words = set(word.lower() for word in query.split())
+    stop_words = {"what", "how", "when", "why", "which", "where", "who", "is", "are", "the"}
+    keywords = query_words - stop_words
     
-    # Find similar questions in dataset
-    all_prompts = [entry["prompt"] for entry in dataset]
-    similar_questions = []
+    suggestions = []
+    for entry in dataset:
+        prompt_words = set(word.lower() for word in entry["prompt"].split())
+        if keywords & prompt_words:
+            suggestions.append(entry["prompt"])
     
-    for prompt in all_prompts:
-        prompt_keywords = set(prompt.lower().split())
-        common = keywords & prompt_keywords
-        if len(common) >= 1:  # At least one keyword match
-            similar_questions.append(prompt)
-    
-    return similar_questions[:5]  # Return top 5 similar questions
+    return list(set(suggestions))[:5]  # Return unique suggestions
 
-# Streamlit UI Configuration
-st.set_page_config(
-    page_title="🧬 Cancer Clinical Trial Search",
-    page_icon="🧬",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
-
-# Sidebar for advanced controls
-with st.sidebar:
-    st.image("https://via.placeholder.com/150x50?text=Cancer+Search", width=150)
-    st.title("Search Settings")
-    
-    cutoff = st.slider(
-        "Match Sensitivity",
-        min_value=0.0,
-        max_value=1.0,
-        value=DEFAULT_CUTOFF,
-        step=0.05,
-        help="Higher values require closer matches"
-    )
-    
-    max_results = st.slider(
-        "Maximum Results",
-        min_value=1,
-        max_value=5,
-        value=3,
-        help="Number of results to display"
-    )
-    
-    st.markdown("---")
-    st.markdown("### About This Tool")
+# Home page layout
+def show_home():
+    st.title("🧬 Precision Cancer Clinical Search")
     st.markdown("""
-    This platform helps researchers find:
-    - Clinical trial details
-    - Drug mechanisms
-    - Treatment outcomes
-    - Biomarker data
+    **Find precise answers about cancer treatments and clinical trials**  
+    This tool helps researchers access structured clinical trial information.
     """)
+    
+    # Search input
+    st.session_state.current_query = st.text_input(
+        "Search clinical questions:",
+        placeholder="e.g., What is the response rate for atezolizumab in PD-L1 high patients?",
+        help="Enter your clinical question or keywords",
+        key="search_input"
+    )
+    
+    # Search button
+    if st.button("Search", type="primary"):
+        if st.session_state.current_query.strip():
+            st.session_state.show_home = False
+            st.session_state.search_history.append({
+                "query": st.session_state.current_query,
+                "timestamp": datetime.now().isoformat()
+            })
 
-# Main content area
-st.title("🧬 Precision Cancer Clinical Search")
-st.markdown("""
-**Find precise answers about cancer treatments and clinical trials**  
-This tool uses advanced pattern matching to surface relevant clinical information from structured datasets.
-""")
-
-# Load data with error handling
-data = load_data()
-if data is None:
-    st.stop()
-
-# Search interface - using session state to maintain query
-user_question = st.text_input(
-    "Search clinical questions:",
-    value=st.session_state.search_input,
-    placeholder="e.g., What is the response rate for atezolizumab in PD-L1 high patients?",
-    help="Enter your clinical question or keywords",
-    key="search_input"
-)
-
-# Handle suggestion clicks
-def update_search(question):
-    st.session_state.search_input = question
-    st.session_state.last_query = question  # Store the last query used
-
-# Display results
-if st.session_state.search_input:
-    current_query = st.session_state.search_input
-    with st.spinner("Searching clinical knowledge base..."):
-        results = find_matches(current_query, data, cutoff=cutoff, max_results=max_results)
+# Results page layout
+def show_results():
+    # Back button
+    if st.button("← Back to Home"):
+        st.session_state.show_home = True
+        return
+    
+    st.title("🔍 Search Results")
+    
+    # Show search history
+    if st.session_state.search_history:
+        with st.expander("📚 Search History", expanded=False):
+            for i, search in enumerate(reversed(st.session_state.search_history), 1):
+                if st.button(f"{i}. {search['query']}", key=f"history_{i}"):
+                    st.session_state.current_query = search["query"]
+                    st.experimental_rerun()
+    
+    # Load data
+    data = load_data()
+    if data is None:
+        return
+    
+    # Current query display
+    st.markdown(f"**Current Search:** {st.session_state.current_query}")
+    
+    # Perform search
+    ranked_results = keyword_search(st.session_state.current_query, data)
+    
+    if ranked_results:
+        st.success(f"Found {len(ranked_results)} relevant results")
         
-        if results:
-            st.success(f"🔍 Found {len(results)} matching results")
-            
-            for i, result in enumerate(results, 1):
-                with st.expander(f"Result #{i}: {result['prompt'][:50]}...", expanded=(i == 1)):
-                    st.markdown(f"**Question:**\n\n{result['prompt']}")
-                    st.markdown(f"**Answer:**\n\n{result['completion']}")
-                    
-                    # Add metadata if available
-                    if "source" in result:
-                        st.caption(f"Source: {result['source']}")
-                    if "trial_id" in result:
-                        st.caption(f"Clinical Trial: {result['trial_id']}")
-        else:
-            st.error("No direct matches found. Here are some suggestions:")
-            
-            # Show alternative suggestions
-            similar_questions = generate_suggestions(current_query, data)
-            
-            if similar_questions:
-                st.markdown("**Try these similar questions:**")
-                cols = st.columns(2)
-                col_idx = 0
-                for i, question in enumerate(similar_questions, 1):
-                    with cols[col_idx]:
-                        if st.button(
-                            f"{question[:60]}...",
-                            key=f"suggestion_{i}",
-                            help="Click to try this search",
-                            on_click=update_search,
-                            args=(question,)
-                        ):
-                            pass
-                    col_idx = 1 - col_idx  # Alternate between columns
-            
-            # General search tips
-            st.markdown("""
-            **Search tips:**
-            1. Use specific drug names (e.g., 'atezolizumab' instead of 'PD-L1 inhibitor')
-            2. Include cancer types (e.g., 'NSCLC' or 'triple-negative breast cancer')
-            3. Focus on one aspect at a time (mechanism, efficacy, or safety)
-            4. Try both abbreviations and full names (e.g., 'OS' and 'overall survival')
-            """)
-            
-            # Show sample questions if no similar questions found
-            if not similar_questions:
-                st.markdown("**Sample questions you could try:**")
-                samples = [
-                    "What is the recommended dose for atezolizumab in bladder cancer?",
-                    "How does PD-L1 expression affect atezolizumab response?",
-                    "What are common adverse events with atezolizumab combination therapy?"
-                ]
-                for sample in samples:
-                    if st.button(
-                        sample,
-                        key=f"sample_{sample[:10]}",
-                        on_click=update_search,
-                        args=(sample,)
-                    ):
-                        pass
+        # Download all button
+        all_results = [result["entry"] for result in ranked_results]
+        col1, col2 = st.columns(2)
+        with col1:
+            st.download_button(
+                "Download All as JSON",
+                json.dumps(all_results, indent=2),
+                file_name="cancer_search_results.json",
+                mime="application/json"
+            )
+        with col2:
+            st.download_button(
+                "Download All as CSV",
+                pd.DataFrame(all_results).to_csv(index=False),
+                file_name="cancer_search_results.csv",
+                mime="text/csv"
+            )
+        
+        # Display results
+        for i, result in enumerate(ranked_results, 1):
+            entry = result["entry"]
+            with st.expander(f"#{i} | Score: {result['score']} (Prompt: {result['prompt_matches']}, Answer: {result['completion_matches']}) - {entry['prompt'][:50]}...", expanded=(i==1)):
+                st.markdown(f"**Question:** {entry['prompt']}")
+                st.markdown(f"**Answer:** {entry['completion']}")
+                
+                # Individual download buttons
+                col1, col2 = st.columns(2)
+                with col1:
+                    st.download_button(
+                        "Download as JSON",
+                        json.dumps(entry, indent=2),
+                        file_name=f"cancer_result_{i}.json",
+                        mime="application/json",
+                        key=f"json_{i}"
+                    )
+                with col2:
+                    st.download_button(
+                        "Download as CSV",
+                        pd.DataFrame([entry]).to_csv(index=False),
+                        file_name=f"cancer_result_{i}.csv",
+                        mime="text/csv",
+                        key=f"csv_{i}"
+                    )
+    else:
+        st.error("No matches found. Try these suggestions:")
+        
+        # Generate and show suggestions
+        suggestions = generate_suggestions(st.session_state.current_query, data)
+        if suggestions:
+            for i, suggestion in enumerate(suggestions, 1):
+                if st.button(suggestion, key=f"suggestion_{i}"):
+                    st.session_state.current_query = suggestion
+                    st.experimental_rerun()
+        
+        st.markdown("""
+        **Search Tips:**
+        - Use specific drug names (e.g., "atezolizumab")
+        - Include cancer types (e.g., "NSCLC")
+        - Try both abbreviations and full terms (e.g., "OS" and "overall survival")
+        """)
 
-# Footer
-st.markdown("---")
-st.markdown("""
-<small>© 2023 Cancer Clinical Search | For research use only</small>
-""", unsafe_allow_html=True)
+# Main app flow
+def main():
+    st.set_page_config(
+        page_title="🧬 Cancer Clinical Trial Search",
+        page_icon="🧬",
+        layout="wide",
+        initial_sidebar_state="expanded"
+    )
+    
+    # Sidebar
+    with st.sidebar:
+        st.image("https://via.placeholder.com/150x50?text=Cancer+Search", width=150)
+        st.title("Navigation")
+        
+        if not st.session_state.show_home:
+            if st.button("🏠 Home"):
+                st.session_state.show_home = True
+                st.experimental_rerun()
+        
+        st.markdown("---")
+        st.markdown("### About")
+        st.markdown("""
+        This platform helps researchers:
+        - Find clinical trial details
+        - Access treatment outcomes
+        - Download structured data
+        """)
+    
+    # Show appropriate page
+    if st.session_state.show_home:
+        show_home()
+    else:
+        show_results()
+
+if __name__ == "__main__":
+    main()
