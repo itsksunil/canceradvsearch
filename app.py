@@ -48,11 +48,32 @@ def find_matches(question, dataset, cutoff=DEFAULT_CUTOFF, max_results=3):
     results = []
     for match in matches:
         for entry in dataset:
-            if entry["prompt"] == match if "prompt" in entry else entry["prompt"] == match:
+            if entry.get("prompt") == match:
                 results.append(entry)
                 break
     
     return results
+
+# Generate alternative suggestions
+def generate_suggestions(question, dataset):
+    # Extract keywords from question
+    keywords = set(question.lower().split())
+    keywords.discard("what")
+    keywords.discard("how")
+    keywords.discard("when")
+    keywords.discard("atezolizumab")  # Remove if you want to keep drug names
+    
+    # Find similar questions in dataset
+    all_prompts = [entry["prompt"] for entry in dataset]
+    similar_questions = []
+    
+    for prompt in all_prompts:
+        prompt_keywords = set(prompt.lower().split())
+        common = keywords & prompt_keywords
+        if len(common) >= 1:  # At least one keyword match
+            similar_questions.append(prompt)
+    
+    return similar_questions[:5]  # Return top 5 similar questions
 
 # Streamlit UI Configuration
 st.set_page_config(
@@ -93,14 +114,6 @@ with st.sidebar:
     - Treatment outcomes
     - Biomarker data
     """)
-    
-    st.markdown("---")
-    st.markdown("**Example searches:**")
-    st.markdown("""
-    - "Atezolizumab PD-L1 efficacy"
-    - "Immune-related adverse events"
-    - "NSCLC combination therapies"
-    """)
 
 # Main content area
 st.title("🧬 Precision Cancer Clinical Search")
@@ -115,19 +128,15 @@ if data is None:
     st.stop()
 
 # Search interface
-col1, col2 = st.columns([3, 1])
-with col1:
-    user_question = st.text_input(
-        "Search clinical questions:",
-        placeholder="e.g., What is the response rate for atezolizumab in PD-L1 high patients?",
-        help="Enter your clinical question or keywords"
-    )
-with col2:
-    st.markdown("<br>", unsafe_allow_html=True)
-    search_btn = st.button("Search", type="primary")
+user_question = st.text_input(
+    "Search clinical questions:",
+    placeholder="e.g., What is the response rate for atezolizumab in PD-L1 high patients?",
+    help="Enter your clinical question or keywords",
+    key="search_input"
+)
 
 # Display results
-if user_question or search_btn:
+if user_question:
     with st.spinner("Searching clinical knowledge base..."):
         results = find_matches(user_question, data, cutoff=cutoff, max_results=max_results)
         
@@ -144,76 +153,37 @@ if user_question or search_btn:
                         st.caption(f"Source: {result['source']}")
                     if "trial_id" in result:
                         st.caption(f"Clinical Trial: {result['trial_id']}")
-                    
-                    # Export options for each result
-                    col1, col2 = st.columns(2)
-                    with col1:
-                        st.download_button(
-                            label="Download as JSON",
-                            data=json.dumps(result, indent=2),
-                            file_name=f"clinical_result_{i}.json",
-                            mime="application/json",
-                            key=f"json_{i}"
-                        )
-                    with col2:
-                        st.download_button(
-                            label="Download as CSV",
-                            data=pd.DataFrame([result]).to_csv(index=False),
-                            file_name=f"clinical_result_{i}.csv",
-                            mime="text/csv",
-                            key=f"csv_{i}"
-                        )
-            
-            # Export all results
-            st.markdown("---")
-            st.subheader("Export All Results")
-            
-            export_data = {
-                "query": user_question,
-                "timestamp": datetime.now().isoformat(),
-                "parameters": {
-                    "cutoff": cutoff,
-                    "max_results": max_results
-                },
-                "results": results
-            }
-            
-            col1, col2 = st.columns(2)
-            with col1:
-                st.download_button(
-                    label="Download All as JSON",
-                    data=json.dumps(export_data, indent=2),
-                    file_name="clinical_search_results.json",
-                    mime="application/json"
-                )
-            with col2:
-                st.download_button(
-                    label="Download All as CSV",
-                    data=pd.DataFrame(results).to_csv(index=False),
-                    file_name="clinical_search_results.csv",
-                    mime="text/csv"
-                )
         else:
-            st.error("No matches found. Try:")
+            st.error("No direct matches found. Here are some suggestions:")
+            
+            # Show alternative suggestions
+            similar_questions = generate_suggestions(user_question, data)
+            
+            if similar_questions:
+                st.markdown("**Try these similar questions:**")
+                for i, question in enumerate(similar_questions, 1):
+                    if st.button(f"{i}. {question}", key=f"suggestion_{i}"):
+                        # Update the search input with the suggested question
+                        st.session_state.search_input = question
+                        st.experimental_rerun()
+            
+            # General search tips
             st.markdown("""
-            - Using different keywords
-            - Lowering the match sensitivity
-            - Making your query more specific
+            **Search tips:**
+            1. Use specific drug names (e.g., 'atezolizumab' instead of 'PD-L1 inhibitor')
+            2. Include cancer types (e.g., 'NSCLC' or 'triple-negative breast cancer')
+            3. Focus on one aspect at a time (mechanism, efficacy, or safety)
+            4. Try both abbreviations and full names (e.g., 'OS' and 'overall survival')
             """)
-
-# Value proposition section
-st.markdown("---")
-st.subheader("Key Features for Researchers")
-cols = st.columns(3)
-with cols[0]:
-    st.markdown("**🔬 Precise Matching**")
-    st.markdown("Find clinically relevant answers with pattern recognition")
-with cols[1]:
-    st.markdown("**💾 Structured Data**")
-    st.markdown("Export results for analysis or reporting")
-with cols[2]:
-    st.markdown("**⚡ Fast Results**")
-    st.markdown("Get answers without complex search syntax")
+            
+            # Show sample questions if no similar questions found
+            if not similar_questions:
+                st.markdown("**Sample questions you could try:**")
+                st.markdown("""
+                - "What is the recommended dose for atezolizumab in bladder cancer?"
+                - "How does PD-L1 expression affect atezolizumab response?"
+                - "What are common adverse events with atezolizumab combination therapy?"
+                """)
 
 # Footer
 st.markdown("---")
