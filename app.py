@@ -21,7 +21,7 @@ def load_and_index_data():
     try:
         with open(DATA_FILE, "r", encoding="utf-8") as f:
             raw_data = json.load(f)
-        
+
         clean_data = []
         word_index = defaultdict(list)
 
@@ -41,9 +41,9 @@ def load_and_index_data():
         if not clean_data:
             st.error("No valid Q&A pairs found in the dataset.")
             return None, None
-        
+
         return clean_data, word_index
-    
+
     except Exception as e:
         st.error(f"Error loading data: {str(e)}")
         return None, None
@@ -53,12 +53,12 @@ def keyword_search(query, dataset, word_index):
     query_words = set(word.lower() for word in query.split() if len(word) > 2)
     if not query_words:
         return []
-    
+
     doc_matches = defaultdict(int)
     for word in query_words:
         if word in word_index:
             for doc_id in word_index[word]:
-                if doc_id < len(dataset):  # ✅ Prevent IndexError
+                if doc_id < len(dataset):
                     doc_matches[doc_id] += 1
 
     ranked_results = []
@@ -81,7 +81,7 @@ def keyword_search(query, dataset, word_index):
     ranked_results.sort(key=lambda x: x["score"], reverse=True)
     return ranked_results
 
-# Home page layout
+# Home page layout (fast search mode)
 def show_home():
     st.title("🧬 Precision Cancer Clinical Search")
     st.markdown("""
@@ -89,26 +89,27 @@ def show_home():
     This tool helps researchers access structured clinical trial information.
     """)
 
-    with st.form("search_form"):
-        query = st.text_input(
-            "Search clinical questions:",
-            value=st.session_state.current_query,
-            placeholder="e.g., What is the response rate for atezolizumab in PD-L1 high patients?",
-            help="Enter your clinical question or keywords"
-        )
+    query = st.text_input(
+        "Search clinical questions:",
+        value=st.session_state.current_query,
+        placeholder="e.g., What is the response rate for atezolizumab in PD-L1 high patients?",
+        help="Enter your clinical question or keywords"
+    )
 
-        if st.form_submit_button("Search", type="primary") and query.strip():
-            st.session_state.current_query = query
-            st.session_state.show_home = False
-            st.session_state.search_history.append({
-                "query": query,
-                "timestamp": datetime.now().isoformat()
-            })
+    if st.button("Search", type="primary") and query.strip():
+        st.session_state.current_query = query
+        st.session_state.show_home = False
+        st.session_state.search_history.append({
+            "query": query,
+            "timestamp": datetime.now().isoformat()
+        })
+        st.experimental_rerun()  # ✅ Instant refresh for fast search
 
 # Results page layout
 def show_results():
     if st.button("← Back to Home"):
         st.session_state.show_home = True
+        st.experimental_rerun()
         return
 
     st.title("🔍 Search Results")
@@ -119,6 +120,8 @@ def show_results():
                 if st.button(f"{i}. {search['query']}", key=f"history_{i}"):
                     st.session_state.current_query = search["query"]
                     st.session_state.show_home = False
+                    st.experimental_rerun()
+                    return
 
     data, word_index = load_and_index_data()
     if data is None:
@@ -137,7 +140,7 @@ def show_results():
 def display_results(ranked_results):
     st.success(f"Found {len(ranked_results)} relevant results")
     all_results = [result["entry"] for result in ranked_results]
-    
+
     col1, col2 = st.columns(2)
     with col1:
         st.download_button(
@@ -156,7 +159,7 @@ def display_results(ranked_results):
 
     for i, result in enumerate(ranked_results, 1):
         entry = result["entry"]
-        with st.expander(f"#{i} | Score: {result['score']} (Prompt: {result['prompt_matches']}, Answer: {result['completion_matches']}) - {entry['prompt'][:50]}...", expanded=(i==1)):
+        with st.expander(f"#{i} | Score: {result['score']} (Prompt: {result['prompt_matches']}, Answer: {result['completion_matches']}) - {entry['prompt'][:50]}...", expanded=(i == 1)):
             st.markdown(f"**Question:** {entry['prompt']}")
             st.markdown(f"**Answer:** {entry['completion']}")
 
@@ -180,7 +183,7 @@ def display_results(ranked_results):
 
 def show_no_results(data, word_index):
     st.error("No matches found. Try these suggestions:")
-    
+
     query_words = set(word.lower() for word in st.session_state.current_query.split() if len(word) > 3)
     suggestions = set()
 
@@ -191,7 +194,7 @@ def show_no_results(data, word_index):
                 doc_ids.update(word_index[word])
 
         for doc_id in list(doc_ids)[:50]:
-            if doc_id < len(data):  # Prevent invalid access
+            if doc_id < len(data):
                 suggestions.add(data[doc_id]["prompt"])
                 if len(suggestions) >= 5:
                     break
@@ -202,6 +205,8 @@ def show_no_results(data, word_index):
             if st.button(suggestion[:100], key=f"suggestion_{hash(suggestion)}"):
                 st.session_state.current_query = suggestion
                 st.session_state.show_home = False
+                st.experimental_rerun()
+                return
 
     st.markdown("""
     **Search Tips:**
@@ -227,6 +232,7 @@ def main():
         if not st.session_state.show_home:
             if st.button("🏠 Home"):
                 st.session_state.show_home = True
+                st.experimental_rerun()
 
         st.markdown("---")
         st.markdown("### About")
