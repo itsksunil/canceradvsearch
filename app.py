@@ -197,32 +197,32 @@ def show_results():
         )
 
         if filtered_results:
-            display_results(filtered_results)
+            display_results(filtered_results, ranked_results)
         else:
             show_no_results(data, word_index)
 
-def display_results(results):
-    st.success(f"Found {len(results)} relevant results (filtered from {len(ranked_results)})")
+def display_results(results, all_results):
+    st.success(f"Found {len(results)} relevant results (filtered from {len(all_results)})")
     
     # Score distribution chart
     if len(results) > 1:
         scores = [r["score"] for r in results]
         st.bar_chart(pd.DataFrame({"Score": scores}), use_container_width=True)
     
-    all_results = [result["entry"] for result in results]
+    all_results_data = [result["entry"] for result in results]
     
     col1, col2 = st.columns(2)
     with col1:
         st.download_button(
             "Download All as JSON",
-            json.dumps(all_results, indent=2),
+            json.dumps(all_results_data, indent=2),
             file_name="cancer_search_results.json",
             mime="application/json"
         )
     with col2:
         st.download_button(
             "Download All as CSV",
-            pd.DataFrame(all_results).to_csv(index=False),
+            pd.DataFrame(all_results_data).to_csv(index=False),
             file_name="cancer_search_results.csv",
             mime="text/csv"
         )
