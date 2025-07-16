@@ -3,90 +3,103 @@ import json
 import networkx as nx
 from pyvis.network import Network
 import tempfile
-import os
 
+# -------------------------------
 # Load JSON data
+# -------------------------------
 @st.cache_data
 def load_data(file_path="cancer_clinical_dataset.json"):
-    with open(file_path, "r", encoding="utf-8") as f:
-        return json.load(f)
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        st.error(f"Failed to load JSON file: {e}")
+        return []
 
-# Build a co-occurrence graph
+# -------------------------------
+# Build co-occurrence graph
+# -------------------------------
 def build_graph(data, min_word_length=3):
     G = nx.Graph()
 
     for entry in data:
         keywords = set()
 
-        # Extract and clean keywords from prompt
-        if "prompt" in entry:
-            keywords |= set(w.lower().strip(".,:;") for w in entry["prompt"].split() if len(w) >= min_word_length)
+        # From prompt
+        if "prompt" in entry and isinstance(entry["prompt"], str):
+            words = entry["prompt"].split()
+            keywords |= set(w.lower().strip(".,:;()[]") for w in words if len(w) >= min_word_length)
 
         # From cancer_type
         if "cancer_type" in entry and entry["cancer_type"]:
-            keywords |= set(w.lower().strip() for w in entry["cancer_type"].split(",") if w.strip())
+            types = [t.strip().lower() for t in entry["cancer_type"].split(",")]
+            keywords |= set(types)
 
         # From genes
         if "genes" in entry and entry["genes"]:
-            keywords |= set(w.lower().strip() for w in entry["genes"].split(",") if w.strip())
+            genes = [g.strip().lower() for g in entry["genes"].split(",")]
+            keywords |= set(genes)
 
-        # Create co-occurrence edges
+        # Build edges
         for kw1 in keywords:
             for kw2 in keywords:
                 if kw1 != kw2:
                     if G.has_edge(kw1, kw2):
-                        G[kw1][kw2]['weight'] += 1
+                        G[kw1][kw2]["weight"] += 1
                     else:
                         G.add_edge(kw1, kw2, weight=1)
-
     return G
 
-# Show interactive graph using pyvis
-def show_graph(G, selected_keyword=None):
-    net = Network(height="600px", width="100%", notebook=False)
+# -------------------------------
+# Display interactive pyvis graph
+# -------------------------------
+def display_graph(G, focus_keyword=None):
+    net = Network(height="600px", width="100%", bgcolor="#ffffff", font_color="black")
     net.barnes_hut()
 
     for node in G.nodes():
-        net.add_node(node, label=node, title=node)
+        net.add_node(node, label=node)
 
     for source, target, data in G.edges(data=True):
-        weight = data.get('weight', 1)
+        weight = data.get("weight", 1)
         net.add_edge(source, target, value=weight)
 
-    if selected_keyword:
-        net.focus(selected_keyword)
+    if focus_keyword and focus_keyword in G.nodes():
+        net.focus(focus_keyword)
 
-    # Save and display HTML
+    # Save graph to HTML
     tmp_file = tempfile.NamedTemporaryFile(delete=False, suffix=".html")
     net.save_graph(tmp_file.name)
-    st.components.v1.html(open(tmp_file.name, "r", encoding="utf-8").read(), height=600, scrolling=True)
 
-# Main Streamlit UI
+    # Display in Streamlit
+    with open(tmp_file.name, "r", encoding="utf-8") as f:
+        html = f.read()
+        st.components.v1.html(html, height=600, scrolling=True)
+
+# -------------------------------
+# Streamlit UI
+# -------------------------------
 def main():
-    st.set_page_config(page_title="🧠 Cancer Keyword Graph", layout="wide")
-    st.title("🧠 Connect the Dots: Cancer Clinical Knowledge Graph")
-
+    st.set_page_config(page_title="🧠 Cancer Knowledge Graph", layout="wide")
+    st.title("🧠 Cancer Clinical Keyword Graph")
     st.markdown("""
-    This tool builds a keyword co-occurrence graph from your clinical Q&A dataset.  
-    Explore how concepts like **genes**, **cancer types**, and **therapies** are connected.
+    This tool visualizes co-occurring keywords, genes, and cancer types  
+    extracted from your clinical Q&A JSON file.
     """)
 
-    data = load_data()
+    data = load_data("cancer_clinical_dataset.json")
 
     if not data:
-        st.error("Dataset is empty or missing.")
+        st.warning("Upload or provide a valid JSON file.")
         return
+
+    st.sidebar.header("🔍 Graph Filters")
+    focus_kw = st.sidebar.text_input("Focus on a keyword (optional)", "")
 
     G = build_graph(data)
 
-    st.sidebar.header("🔎 Graph Filter")
-    selected_keyword = st.sidebar.text_input("Focus on a keyword (optional)", value="")
-
-    if selected_keyword and selected_keyword.lower() not in G.nodes:
-        st.sidebar.warning("Keyword not found in graph.")
-
-    st.markdown("### 🔗 Keyword Relationship Network")
-    show_graph(G, selected_keyword.lower() if selected_keyword else None)
+    st.subheader("🔗 Interactive Concept Graph")
+    display_graph(G, focus_kw.strip().lower() if focus_kw else None)
 
 if __name__ == "__main__":
     main()
