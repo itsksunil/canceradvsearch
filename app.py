@@ -1,15 +1,10 @@
 import streamlit as st
 import json
 import pandas as pd
-import networkx as nx
 from datetime import datetime
 from collections import defaultdict
 import random
 import os
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-import community as community_louvain  # python-louvain package
-import matplotlib.pyplot as plt
 
 # Initialize session state
 if 'search_history' not in st.session_state:
@@ -32,15 +27,10 @@ if 'cancer_types' not in st.session_state:
     st.session_state.cancer_types = []
 if 'genes' not in st.session_state:
     st.session_state.genes = []
-if 'knowledge_graph' not in st.session_state:
-    st.session_state.knowledge_graph = None
-if 'concept_network' not in st.session_state:
-    st.session_state.concept_network = None
 
 # Constants
 DATA_FILE = "cancer_clinical_dataset.json"
 HISTORY_FILE = "search_history.json"
-GRAPH_FILE = "knowledge_graph.gexf"
 
 # Load and save search history
 def load_search_history():
@@ -58,72 +48,6 @@ def save_search_history():
             json.dump(st.session_state.search_history, f)
     except:
         pass
-
-# Build knowledge graph from the dataset
-def build_knowledge_graph(data):
-    G = nx.Graph()
-    
-    # Extract entities and relationships
-    for entry in data:
-        # Add nodes for each entry
-        entry_id = f"entry_{hash(entry['prompt'])}"
-        G.add_node(entry_id, type="entry", prompt=entry["prompt"], completion=entry["completion"])
-        
-        # Process cancer types
-        if entry["cancer_type"]:
-            for ct in entry["cancer_type"].split(","):
-                ct = ct.strip()
-                if ct:
-                    G.add_node(ct, type="cancer_type")
-                    G.add_edge(entry_id, ct, relationship="about")
-        
-        # Process genes
-        if entry["genes"]:
-            for gene in entry["genes"].split(","):
-                gene = gene.strip()
-                if gene:
-                    G.add_node(gene, type="gene")
-                    G.add_edge(entry_id, gene, relationship="involves")
-        
-        # Extract key terms from prompt and completion
-        text = f"{entry['prompt']} {entry['completion']}"
-        terms = set(word.lower() for word in text.split() if len(word) > 3 and word.isalpha())
-        
-        for term in terms:
-            G.add_node(term, type="term")
-            G.add_edge(entry_id, term, relationship="mentions")
-    
-    return G
-
-# Load or create knowledge graph
-@st.cache_data
-def load_or_create_graph(data):
-    if os.path.exists(GRAPH_FILE):
-        try:
-            return nx.read_gexf(GRAPH_FILE)
-        except:
-            pass
-    
-    G = build_knowledge_graph(data)
-    nx.write_gexf(G, GRAPH_FILE)
-    return G
-
-# Find related concepts in the knowledge graph
-def find_related_concepts(graph, query, top_n=5):
-    if not graph or not query:
-        return []
-    
-    query_terms = set(word.lower() for word in query.split() if len(word) > 3)
-    related = defaultdict(float)
-    
-    for term in query_terms:
-        if term in graph:
-            for neighbor in graph.neighbors(term):
-                if graph.nodes[neighbor]["type"] != "entry":
-                    weight = graph[term][neighbor].get("weight", 1.0)
-                    related[neighbor] += weight
-    
-    return sorted(related.items(), key=lambda x: x[1], reverse=True)[:top_n]
 
 # Load and preprocess data with caching
 @st.cache_data
@@ -174,24 +98,21 @@ def load_and_index_data():
 
         if not clean_data:
             st.error("No valid Q&A pairs found in the dataset.")
-            return None, None, [], [], [], None
+            return None, None, [], [], []
         
         # Generate random suggestions
         random_suggestions = random.sample(all_prompts, min(10, len(all_prompts))) if all_prompts else []
         
-        # Build knowledge graph
-        knowledge_graph = load_or_create_graph(clean_data)
-        
-        return clean_data, word_index, sorted(cancer_types), sorted(genes), random_suggestions, knowledge_graph
+        return clean_data, word_index, sorted(cancer_types), sorted(genes), random_suggestions
     
     except Exception as e:
         st.error(f"Error loading data: {str(e)}")
-        return None, None, [], [], [], None
+        return None, None, [], [], []
 
-# Enhanced keyword search with filters and knowledge graph
-def keyword_search(query, dataset, word_index, knowledge_graph):
+# Enhanced keyword search with filters
+def keyword_search(query, dataset, word_index):
     if not query or not dataset:
-        return [], []
+        return []
     
     query_words = set(word.lower() for word in query.split() if len(word) > 2)
     
@@ -221,11 +142,7 @@ def keyword_search(query, dataset, word_index, knowledge_graph):
         })
 
     ranked_results.sort(key=lambda x: x["score"], reverse=True)
-    
-    # Find related concepts from knowledge graph
-    related_concepts = find_related_concepts(knowledge_graph, query)
-    
-    return ranked_results, related_concepts
+    return ranked_results
 
 # Filter results based on multiple criteria
 def filter_results(results, min_score, keyword_filters, cancer_types, genes):
@@ -263,7 +180,7 @@ def show_home():
     st.title("🧬 Precision Cancer Clinical Search")
     st.markdown("""
     **Find precise answers about cancer treatments and clinical trials**  
-    This tool helps researchers discover connections between cancer types, genes, and treatments.
+    This tool helps researchers access structured clinical trial information.
     """)
 
     # Display random suggestions
@@ -384,7 +301,7 @@ def show_results():
             st.rerun()
 
     # Load data
-    data, word_index, cancer_types, genes, _, knowledge_graph = load_and_index_data()
+    data, word_index, cancer_types, genes, _ = load_and_index_data()
     if data is None:
         return
 
@@ -393,8 +310,6 @@ def show_results():
         st.session_state.cancer_types = cancer_types
     if genes:
         st.session_state.genes = genes
-    if knowledge_graph:
-        st.session_state.knowledge_graph = knowledge_graph
 
     # Display search history
     if st.session_state.search_history:
@@ -410,12 +325,7 @@ def show_results():
     st.markdown(f"**Current Search:** {st.session_state.current_query}")
 
     with st.spinner("Searching clinical knowledge base..."):
-        ranked_results, related_concepts = keyword_search(
-            st.session_state.current_query, 
-            data, 
-            word_index,
-            st.session_state.knowledge_graph
-        )
+        ranked_results = keyword_search(st.session_state.current_query, data, word_index)
         filtered_results = filter_results(
             ranked_results,
             st.session_state.min_score,
@@ -425,23 +335,12 @@ def show_results():
         ) if ranked_results else []
 
         if filtered_results:
-            display_results(filtered_results, ranked_results, related_concepts)
+            display_results(filtered_results, ranked_results)
         else:
             show_no_results(data, word_index)
 
-def display_results(results, all_results, related_concepts):
+def display_results(results, all_results):
     st.success(f"Found {len(results)} relevant results (from {len(all_results)} total matches)")
-    
-    # Show related concepts from knowledge graph
-    if related_concepts:
-        with st.expander("🔗 Related Concepts", expanded=True):
-            st.markdown("**These concepts are frequently associated with your search:**")
-            cols = st.columns(4)
-            for i, (concept, score) in enumerate(related_concepts):
-                with cols[i % 4]:
-                    if st.button(f"{concept}", key=f"concept_{i}"):
-                        st.session_state.current_query = concept
-                        st.rerun()
     
     # Score distribution chart
     if len(results) > 1:
@@ -561,15 +460,13 @@ def main():
 
     # Load data and suggestions
     if not st.session_state.suggestions or not st.session_state.cancer_types or not st.session_state.genes:
-        data, word_index, cancer_types, genes, suggestions, knowledge_graph = load_and_index_data()
+        data, word_index, cancer_types, genes, suggestions = load_and_index_data()
         if suggestions:
             st.session_state.suggestions = suggestions
         if cancer_types:
             st.session_state.cancer_types = cancer_types
         if genes:
             st.session_state.genes = genes
-        if knowledge_graph:
-            st.session_state.knowledge_graph = knowledge_graph
 
     with st.sidebar:
         st.image("https://via.placeholder.com/150x50?text=Cancer+Search", width=150)
@@ -585,9 +482,9 @@ def main():
         st.markdown("""
         This platform helps researchers:
         - Find clinical trial details
-        - Discover connections between concepts
         - Access treatment outcomes
         - Download structured data
+        - Filter by cancer types and genes
         """)
 
     if st.session_state.show_home:
