@@ -5739,8 +5739,101 @@
   {
     "prompt": "What is a key challenge in translating nanoparticle research into clinical practice?",
     "completion": "Bridging the gap between promising lab results and safe, scalable clinical application."
+  },
+
+  
+  {
+    "Nanocomposites": "Graphene oxide/gemcitabine/montmorillonite/chitosan",
+    "Size": "130 nm",
+    "Cancer_cell_line": "MB-231-MDA cells",
+    "Drug_loading_efficiency": "-",
+    "Drug_used": "Gemcitabine",
+    "Drug_release_efficiency": "23% within 24 hours at pH 7.4",
+    "Stability": "Excellent physical, chemical, and thermal stability; timeframe not specified"
+  },
+  {
+    "Nanocomposites": "Cyclodextrin dendritic-Graphene oxide",
+    "Size": "-",
+    "Cancer_cell_line": "Human breast cancer cells",
+    "Drug_loading_efficiency": "9.8%",
+    "Drug_used": "Doxorubicin",
+    "Drug_release_efficiency": "67% at pH 5.2, 85% at pH 7.4 within 144 hours",
+    "Stability": "-"
+  },
+  {
+    "Nanocomposites": "Superparamagnetic graphene oxide",
+    "Size": "9.3 (± 2.7) nm",
+    "Cancer_cell_line": "MCF-7, HeLa, Caov-4 cancer cell lines",
+    "Drug_loading_efficiency": "75%",
+    "Drug_used": "Methotrexate",
+    "Drug_release_efficiency": "46% at pH 7.4, 59% at pH 5.5 within 75 hours",
+    "Stability": "Functional at physiological pH; stability duration not specified"
+  },
+  {
+    "Nanocomposites": "Mesoporous silica/nanoparticles/GO/topotecan",
+    "Size": "190 nm",
+    "Cancer_cell_line": "MDA-MB-231 cells",
+    "Drug_loading_efficiency": "36.6%",
+    "Drug_used": "Topotecan",
+    "Drug_release_efficiency": "76% at pH 5.5, 45% at pH 7.4 within 24 hours",
+    "Stability": "-"
+  },
+  {
+    "Nanocomposites": "Cyclodextrin/cystamine/pegylated functionalized graphene oxide",
+    "Size": "531 nm",
+    "Cancer_cell_line": "Human liver cancer cell line",
+    "Drug_loading_efficiency": "95.5%",
+    "Drug_used": "Doxorubicin",
+    "Drug_release_efficiency": "65.2% at pH 7.4, 37.6% at pH 5.3 within 72 hours",
+    "Stability": "Excellent resistance to salt solution in human body; time limit unspecified"
+  },
+  {
+    "Nanocomposites": "Amino acids-functionalized GO foams",
+    "Size": "80 nm",
+    "Cancer_cell_line": "HepG2 and MCF-7 cell lines",
+    "Drug_loading_efficiency": "67.55%",
+    "Drug_used": "Cisplatin",
+    "Drug_release_efficiency": "68.1% at pH 7.4 within 7 hours",
+    "Stability": "Excellent biocompatibility and storage stability"
+  },
+  {
+    "Nanocomposites": "Ferric oxide/Reduced graphene oxide/chitosan/doxorubicin",
+    "Size": "60 nm",
+    "Cancer_cell_line": "MCF-7 and A549 cancer cells",
+    "Drug_loading_efficiency": "98%",
+    "Drug_used": "Doxorubicin",
+    "Drug_release_efficiency": "96.6% at pH 5.5, 10% at pH 7.4 within 10 hours",
+    "Stability": "-"
+  },
+  {
+    "Nanocomposites": "miRNA/-polyethylene glycol/nano-GO/folic acid - platinum",
+    "Size": "200-500 nm",
+    "Cancer_cell_line": "SKOV 3 cells, SKOV 3 DDP cells",
+    "Drug_loading_efficiency": "6%",
+    "Drug_used": "Platinum",
+    "Drug_release_efficiency": "90% at pH 5, 63% at pH 7.4",
+    "Stability": "Excellent two-week stability in water, MES, PBS, and cell media"
+  },
+  {
+    "Nanocomposites": "Graphene oxide/magnetic iron oxide nanoparticles",
+    "Size": "< 100 nm",
+    "Cancer_cell_line": "Human neuroblastoma/SH-SY5Y cells",
+    "Drug_loading_efficiency": "-",
+    "Drug_used": "Doxorubicin",
+    "Drug_release_efficiency": "28% at pH 7.4, 45% at pH 5.5 within 120 hours",
+    "Stability": "Increased solubility and stability for 24 hours"
+  },
+  {
+    "Nanocomposites": "Paclitaxel/graphene oxide/gold nanorods loaded into poly(tetramethylene ether) glycol/polyurethane",
+    "Size": "Average length 34 ± 3 nm, width 9.8 ± 1.2 nm",
+    "Cancer_cell_line": "Human lung cancer cell lines/A549",
+    "Drug_loading_efficiency": "-",
+    "Drug_used": "Paclitaxel",
+    "Drug_release_efficiency": "80% after 96 and 120 hours under pH 5.5 and 7.4",
+    "Stability": "-"
   }
-]
+
+ ]
 
 
 
