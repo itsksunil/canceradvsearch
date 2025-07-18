@@ -6795,8 +6795,79 @@
   {
     "prompt": "How does Abraxane improve therapeutic outcomes compared to free paclitaxel?",
     "completion": "Abraxane, an albumin-bound nanoparticle, enhances therapeutic outcomes and avoids side effects related to toxic solvents like Cremophor EL."
+  },
+
+
+  {
+    "prompt": "What is the formulation and dosing for Alogliptin/Metformin (Kazano)?",
+    "completion": "Kazano (Alogliptin/Metformin) comes in 12.5mg/500mg and 12.5mg/1000mg pale yellow oblong tablets. Initial dose is 12.5mg/500mg once or twice daily, with a maximum of 25mg/2000mg daily taken in two divided doses with food."
+  },
+  {
+    "prompt": "Describe the Alogliptin/Pioglitazone (Oseni) combination medication.",
+    "completion": "Oseni combines alogliptin and pioglitazone in round tablets of various strengths (12.5mg/15mg pale yellow to 25mg/45mg red). Start with 12.5mg/15mg once daily, titrating up to 25mg/45mg maximum. Can be taken with or without food."
+  },
+  {
+    "prompt": "What are the characteristics of Empagliflozin/Linagliptin (Glyxambi)?",
+    "completion": "Glyxambi contains empagliflozin/linagliptin in triangular tablets (10mg/5mg pale yellow or 25mg/5mg pale pink). Initial dose is 10mg/5mg once daily, maximum 25mg/5mg daily. This SGLT2 inhibitor/DPP-4 inhibitor combination helps control blood sugar."
+  },
+  {
+    "prompt": "How is Empagliflozin/Metformin (Synjardy) dosed?",
+    "completion": "Synjardy (empagliflozin/metformin) comes in oval film-coated tablets ranging from 5mg/500mg orange-yellow to 12.5mg/1000mg dark brownish purple. Start with 5mg/500mg or 5mg/1000mg, max 25mg/2000mg daily in divided doses."
+  },
+  {
+    "prompt": "What should I know about Canagliflozin/Metformin (Invokamet)?",
+    "completion": "Invokamet combines canagliflozin/metformin in capsule-shaped tablets (50mg/500mg white to 150mg/1000mg purple). Initial dose is 50mg/500mg or 50mg/1000mg, maximum 300mg/2000mg daily in two divided doses. Monitor for SGLT2 inhibitor-related side effects."
+  },
+  {
+    "prompt": "Describe the XR formulation of Dapagliflozin/Metformin (Xigduo XR).",
+    "completion": "Xigduo XR is an extended-release combination of dapagliflozin/metformin in oval tablets (5mg/500mg orange to 10mg/1000mg yellow). Dosing starts based on current regimen, max 10mg/2000mg daily. The XR formulation allows once-daily dosing."
+  },
+  {
+    "prompt": "What are the dosing options for Glyburide/Metformin (Glucovance)?",
+    "completion": "Glucovance (glyburide/metformin) tablets come in 1.25mg/250mg to 5mg/500mg strengths. Start with 1.25mg/250mg once or twice daily, maximum 20mg/2000mg daily. Take with meals to reduce gastrointestinal effects."
+  },
+  {
+    "prompt": "How does Glipizide/Metformin (Metaglip) differ from other sulfonylurea combinations?",
+    "completion": "Metaglip combines glipizide (shorter-acting sulfonylurea) with metformin in 2.5mg/250mg to 5mg/500mg tablets. Initial dose is 2.5mg/250mg daily or 2.5mg/500mg twice daily, max 20mg/2000mg daily. May have lower hypoglycemia risk than longer-acting sulfonylureas."
+  },
+  {
+    "prompt": "What is unique about Linagliptin/Metformin (Jentadueto) dosing?",
+    "completion": "Jentadueto (linagliptin/metformin) features oval tablets (2.5mg/500mg light yellow to 2.5mg/1000mg light pink) dosed twice daily with food. The linagliptin component has primarily non-renal excretion, making it suitable for renal impairment."
+  },
+  {
+    "prompt": "Describe the Rosiglitazone/Metformin (Avandamet) combination.",
+    "completion": "Avandamet combines rosiglitazone (PPAR-γ agonist) with metformin in oval tablets (2mg/500mg pale pink to 4mg/1000mg pink). Start with 2mg/500mg once/twice daily, max 8mg/2000mg daily in divided doses. Note boxed warnings for rosiglitazone."
+  },
+  {
+    "prompt": "What are the formulations of Pioglitazone/Metformin (ActoPlus Met)?",
+    "completion": "ActoPlus Met offers pioglitazone/metformin in 15mg/500mg and 15mg/850mg white to off-white oblong tablets. Initial dose is 15mg/500mg or 15mg/850mg once/twice daily, max 45mg/2550mg daily. Dosed once or twice daily with meals."
+  },
+  {
+    "prompt": "How is Pioglitazone/Glimepiride (Duetact) administered?",
+    "completion": "Duetact combines pioglitazone/glimepiride in 30mg/2mg or 30mg/4mg white tablets. Take one tablet once daily with first main meal. Maximum dose is one tablet daily (30mg/4mg). Monitor for hypoglycemia with this TZD/sulfonylurea combination."
+  },
+  {
+    "prompt": "What should be considered with Rosiglitazone/Glimepiride (Avandaryl)?",
+    "completion": "Avandaryl (rosiglitazone/glimepiride) comes in rounded triangle tablets (4mg/1mg yellow to 4mg/4mg pink). Start with 4mg/1mg or 4mg/2mg once daily, max 8mg/4mg daily. Contains two insulin secretagogues - monitor for fluid retention and hypoglycemia."
+  },
+  {
+    "prompt": "Describe the immediate and XR versions of Sitagliptin/Metformin.",
+    "completion": "Janumet (sitagliptin/metformin IR) comes as oblong tablets (50mg/500mg light pink to 50mg/1000mg red) dosed twice daily. Janumet XR offers oval tablets (50mg/500mg light blue to 100mg/1000mg blue) for once-daily dosing. Both max at 100mg/2000mg daily."
+  },
+  {
+    "prompt": "What is special about Repaglinide/Metformin (PrandiMet) dosing?",
+    "completion": "PrandiMet combines rapid-acting repaglinide with metformin in yellow (1mg/500mg) or pink (2mg/500mg) tablets. Dosed pre-meal: start 1mg/500mg twice daily, max 4mg/1000mg per dose or 10mg/2500mg daily. Unique mealtime dosing among combinations."
+  },
+  {
+    "prompt": "How does ActoPlus Met XR differ from regular ActoPlus Met?",
+    "completion": "ActoPlus Met XR contains extended-release metformin with pioglitazone in round white tablets (15mg/1000mg or 30mg/1000mg). Dosed once daily versus twice daily for immediate-release. Same max pioglitazone dose (45mg) but lower max metformin (2000mg vs 2550mg)."
+  },
+  {
+    "prompt": "What are the dosing options for Saxagliptin/Metformin XR (Kombiglyze XR)?",
+    "completion": "Kombiglyze XR combines saxagliptin with metformin XR in capsule-shaped tablets (5mg/500mg brown to 2.5mg/1000mg light yellow). Start with 5mg/500mg or 5mg/1000mg once daily, max 5mg/2000mg daily. Take with evening meal to reduce GI effects."
   }
 ]
+
 
 
 
