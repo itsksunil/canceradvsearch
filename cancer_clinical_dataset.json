@@ -6865,8 +6865,581 @@
   {
     "prompt": "What are the dosing options for Saxagliptin/Metformin XR (Kombiglyze XR)?",
     "completion": "Kombiglyze XR combines saxagliptin with metformin XR in capsule-shaped tablets (5mg/500mg brown to 2.5mg/1000mg light yellow). Start with 5mg/500mg or 5mg/1000mg once daily, max 5mg/2000mg daily. Take with evening meal to reduce GI effects."
+  },
+
+  
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the NCT number of the EORTC study on intermittent androgen deprivation therapy?",
+    "completion": "NCT05974774"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What phase is the EORTC 2238 trial?",
+    "completion": "Phase 3"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the primary objective of trial NCT05974774?",
+    "completion": "To compare overall survival between intermittent and continuous androgen deprivation therapy."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What condition is being studied in trial NCT05974774?",
+    "completion": "Metastatic hormone-naïve prostate cancer"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the study design of NCT05974774?",
+    "completion": "Randomized, open-label"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What type of therapy is iMAB?",
+    "completion": "Intermittent maximum androgen blockade"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What type of therapy is cMAB?",
+    "completion": "Continuous maximum androgen blockade"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "How many patients are expected to be enrolled?",
+    "completion": "1600"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the estimated start date of the study?",
+    "completion": "May 15, 2025"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the estimated primary completion date?",
+    "completion": "May 15, 2033"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the estimated study completion date?",
+    "completion": "June 1, 2039"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Which drugs are used in the trial?",
+    "completion": "Goserelin, Abiraterone, Triptorelin, Leuprorelin, Enzalutamide, Degarelix, Apalutamide, Darolutamide, Relugolix"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the role of PSA in this trial?",
+    "completion": "PSA is used to monitor disease status and guide treatment interruption or resumption."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the PSA eligibility requirement?",
+    "completion": "PSA ≤ 0.2 ng/mL after 6–12 months of ADT and ARPI"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Is prior docetaxel treatment allowed?",
+    "completion": "Yes"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Are patients with prior bilateral orchiectomy eligible?",
+    "completion": "No"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Are healthy volunteers included in the study?",
+    "completion": "No"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the sponsor of the study?",
+    "completion": "EORTC"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the other study ID number?",
+    "completion": "EORTC 2238"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What type of trial is NCT05974774?",
+    "completion": "Interventional"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What are some side effects of continuous androgen deprivation?",
+    "completion": "Fatigue, cognitive decline, cardiovascular risks, loss of libido"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Why is intermittent treatment being evaluated?",
+    "completion": "To reduce side effects and improve quality of life without compromising survival"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the patient age range for eligibility?",
+    "completion": "18 to 100 years"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the inclusion criterion regarding ARPI?",
+    "completion": "Patients must be treated with ADT and ARPI for 6–12 months"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What kind of imaging leads to exclusion?",
+    "completion": "Modern imaging showing M1a disease with plan for long-term hormone therapy"
+  },
+
+
+
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the official title of trial NCT05974774?",
+    "completion": "Intermittent Androgen Deprivation Therapy in the Era of AR Pathway Inhibitors; a Phase 3 Pragmatic Randomized Trial."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Why is treatment optimization important in prostate cancer?",
+    "completion": "To reduce side effects, improve quality of life, and lower healthcare burden while maintaining survival."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What does continuous androgen deprivation lead to?",
+    "completion": "Fatigue, cognitive effects, cardiovascular disease, loss of libido, and bone density loss."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the main clinical question addressed by this trial?",
+    "completion": "Whether intermittent therapy provides comparable overall survival to continuous treatment."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the PSA threshold for restarting treatment in the iMAB group?",
+    "completion": "When PSA increases above 0.2 ng/mL."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the PSA threshold for stopping treatment again in the intermittent arm?",
+    "completion": "When PSA falls to 0.2 ng/mL or lower."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What quality-of-life benefit is expected with intermittent therapy?",
+    "completion": "Testosterone recovery may improve energy, mood, and sexual function."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "How does this study measure cancer status?",
+    "completion": "By monitoring prostate-specific antigen (PSA) levels."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What are AR pathway inhibitors used in this trial?",
+    "completion": "Abiraterone, Enzalutamide, Apalutamide, Darolutamide."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What are androgen deprivation agents used in the trial?",
+    "completion": "Goserelin, Triptorelin, Leuprorelin, Degarelix, Relugolix."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What kind of trial is this in terms of intervention model?",
+    "completion": "Parallel assignment"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Is this study blinded?",
+    "completion": "No, it is an open-label study."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Are patients required to give informed consent?",
+    "completion": "Yes, in accordance with ICH/GCP and national/local regulations."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Can patients with M1a disease be enrolled?",
+    "completion": "No, if long-term hormone therapy and radiation are planned."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Can patients with concurrent cancers be included?",
+    "completion": "No, if the malignancy may interfere with safety or efficacy assessments."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Can patients treated with EMA-unapproved drugs be included?",
+    "completion": "No, systemic therapies not approved by EMA lead to exclusion."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What factors may affect study compliance and lead to exclusion?",
+    "completion": "Psychological, familial, sociological, or geographical barriers."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What are the study arms in NCT05974774?",
+    "completion": "Intermittent MAB (iMAB) and Continuous MAB (cMAB)."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the comparator in the control arm?",
+    "completion": "Continuous maximum androgen blockade (cMAB)."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the estimated sample size?",
+    "completion": "1600 participants."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the primary endpoint of this trial?",
+    "completion": "Overall survival (OS)."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What follow-up period is estimated for final study completion?",
+    "completion": "Until June 1, 2039."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the potential risk of intermittent androgen deprivation?",
+    "completion": "Possibly shorter overall survival if cancer regrowth occurs faster."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What aspect of patient experience is prioritized in this study?",
+    "completion": "Quality of life"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What imaging methods are mentioned for eligibility assessment?",
+    "completion": "PET-Choline, PET-PSMA, Whole Body MRI"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What happens when PSA rises in intermittent group?",
+    "completion": "Androgen deprivation is restarted."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What happens when PSA falls again in intermittent group?",
+    "completion": "Treatment is stopped again."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What type of patient is the target population?",
+    "completion": "Men with metastatic hormone-naïve prostate cancer (mHNPC)."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Why is mHNPC a suitable model for intermittent therapy?",
+    "completion": "Because PSA is a reliable early biomarker and progression is slow."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the value of drug holidays explored in this trial?",
+    "completion": "To reduce toxicity while maintaining efficacy."
+  },
+
+
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What age range is eligible for trial NCT05974774?",
+    "completion": "18 to 100 years"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Are females eligible for this prostate cancer study?",
+    "completion": "No"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Are healthy volunteers accepted in this study?",
+    "completion": "No"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the required PSA level for inclusion in the study?",
+    "completion": "PSA ≤ 0.2 ng/mL"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What duration of prior ADT and ARPI therapy is required for eligibility?",
+    "completion": "6 to 12 months"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Can patients who received docetaxel be included?",
+    "completion": "Yes"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Can patients who received radiotherapy be included?",
+    "completion": "Yes"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Are patients with synchronous or metachronous metastases eligible?",
+    "completion": "Yes, if other criteria are met"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What type of informed consent is required?",
+    "completion": "Written informed consent per ICH/GCP and local regulations"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Are patients with M1a disease on PET-PSMA imaging eligible?",
+    "completion": "No, if radiation and long-term hormone therapy is planned"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Are patients who underwent bilateral orchiectomy eligible?",
+    "completion": "No"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Are patients with interfering malignancies eligible?",
+    "completion": "No"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Are patients treated with non-EMA-approved systemic therapies eligible?",
+    "completion": "No"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What non-medical factors can exclude a patient?",
+    "completion": "Psychological, familial, sociological, or geographical barriers to compliance"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the allocation method in this trial?",
+    "completion": "Randomized"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the intervention model of the trial?",
+    "completion": "Parallel Assignment"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Is this a blinded study?",
+    "completion": "No, it is an open-label study"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the primary purpose of the study?",
+    "completion": "Treatment"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What type of study is NCT05974774?",
+    "completion": "Interventional"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the sex eligibility for this study?",
+    "completion": "Male only"
+  },
+
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What are the intervention arms in trial NCT05974774?",
+    "completion": "Arm A (continuous MAB) and Arm B (intermittent MAB)"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What treatment is given in Arm A of NCT05974774?",
+    "completion": "Continuous ADT with LHRH agonist or antagonist plus ARPI"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the treatment strategy in Arm B?",
+    "completion": "Intermittent ADT and ARPI, restarted based on PSA level"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Which ARPIs are used in this study?",
+    "completion": "Abiraterone, Enzalutamide, Apalutamide, Darolutamide"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Which hormone agents are used in ADT for this trial?",
+    "completion": "LHRH agonist or antagonist"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "When is treatment restarted in Arm B (iMAB)?",
+    "completion": "When PSA rises significantly, as determined by the treating physician"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What happens after PSA drops below 0.2 ng/mL in Arm B?",
+    "completion": "Treatment is stopped again"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the primary outcome measure of NCT05974774?",
+    "completion": "Overall survival at 3 years"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the hypothesis regarding iMAB in this study?",
+    "completion": "That iMAB is non-inferior to continuous therapy in terms of overall survival"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is a secondary endpoint related to therapy interruption?",
+    "completion": "Proportion of patients who do not restart hormonal therapy within 1 year"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What safety measure is tracked in this trial?",
+    "completion": "Occurrence of adverse events using CTCAE v5.0"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Which version of CTCAE is used for toxicity grading?",
+    "completion": "Version 5.0"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the time frame for adverse event tracking?",
+    "completion": "10 years from randomisation"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What outcome is used to evaluate treatment burden?",
+    "completion": "Time spent on MAB treatment"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "How is delay in next treatment assessed?",
+    "completion": "Time to next systemic prostate cancer therapy"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What tool is used to assess HRQoL physical functioning?",
+    "completion": "EORTC QLQ-C30"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What patient-reported domains are measured in HRQoL?",
+    "completion": "Sexual activity, physical fatigue, and pain characteristics"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Which questionnaire contributes to pain-related HRQoL in this trial?",
+    "completion": "IL249 item list and additional EORTC pain scales"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "How is health utility calculated in the study?",
+    "completion": "From QLQ-C30 data mapped to EQ-5D using published algorithms"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the purpose of mapping QLQ-C30 to EQ-5D?",
+    "completion": "To derive health utility scores for cost-effectiveness analysis"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the time frame for collecting HRQoL data?",
+    "completion": "Up to 60 months from randomisation"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is prostate cancer-specific survival?",
+    "completion": "Time from randomization to death from prostate cancer, with other causes treated as competing risks"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Over what period is prostate cancer-specific survival measured?",
+    "completion": "10 years from randomisation"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is a key functional outcome of interest?",
+    "completion": "Physical functioning score from EORTC QLQ-C30"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What threshold defines a successful delay in restarting therapy?",
+    "completion": "At least 70% of patients should not restart within 1 year"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Which scale is used to measure patient-reported pain?",
+    "completion": "EORTC pain scale and IL249 item list"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What kind of study is NCT05974774?",
+    "completion": "A Phase 3 interventional study evaluating iMAB vs cMAB"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What is the rationale behind intermittent therapy?",
+    "completion": "To maintain survival while reducing toxicity and improving HRQoL"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "How long is follow-up planned for this study?",
+    "completion": "Up to 10 years from randomisation"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What intervention name is used for continuous treatment?",
+    "completion": "cMAB (continuous maximum androgen blockade)"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What intervention name is used for intermittent treatment?",
+    "completion": "iMAB (intermittent maximum androgen blockade)"
+  },
+
+
+
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Who is the sponsor of the clinical trial NCT05974774?",
+    "completion": "European Organisation for Research and Treatment of Cancer (EORTC)"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Name one collaborator organization involved in the NCT05974774 trial.",
+    "completion": "Cancer Trials Ireland"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "List all collaborator organizations for the NCT05974774 study.",
+    "completion": "Cancer Trials Ireland, UNICANCER, Spanish Oncology Genito-Urinary Group"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "What role does EORTC play in the NCT05974774 trial?",
+    "completion": "EORTC is the sponsor of the trial."
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Which oncology group from Spain is collaborating in the NCT05974774 study?",
+    "completion": "Spanish Oncology Genito-Urinary Group"
+  },
+  {
+    "nct_id": "NCT05974774",
+    "prompt": "Which European cancer organization sponsors the intermittent androgen deprivation therapy trial?",
+    "completion": "European Organisation for Research and Treatment of Cancer (EORTC)"
   }
 ]
+
+
 
 
 
