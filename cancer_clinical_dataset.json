@@ -7436,20 +7436,595 @@
     "nct_id": "NCT05974774",
     "prompt": "Which European cancer organization sponsors the intermittent androgen deprivation therapy trial?",
     "completion": "European Organisation for Research and Treatment of Cancer (EORTC)"
-  }
-]
-
-
-
-
-
-
-
-
-
+  },
 
 
   
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the ClinicalTrials.gov ID for the elacestrant trial in ER+/HER2- breast cancer?",
+    "completion": "NCT05512364"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the sponsor organization for trial NCT05512364?",
+    "completion": "European Organisation for Research and Treatment of Cancer (EORTC)"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What phase is the elacestrant trial NCT05512364?",
+    "completion": "Phase 3"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the study design for trial NCT05512364?",
+    "completion": "Randomized, open-label, superiority Phase 3 trial"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the target enrollment for the elacestrant trial?",
+    "completion": "220 participants"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "When did the trial NCT05512364 start?",
+    "completion": "December 15, 2023"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the estimated primary completion date for trial NCT05512364?",
+    "completion": "July 1, 2028"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the estimated study completion date for NCT05512364?",
+    "completion": "May 1, 2030"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What drugs are compared in the trial NCT05512364?",
+    "completion": "Elacestrant versus standard endocrine therapies including Tamoxifen, Letrozole, Anastrozole, and Exemestane"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What condition is being studied in trial NCT05512364?",
+    "completion": "ER-positive, HER2-negative breast cancer with ctDNA relapse"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the primary purpose of trial NCT05512364?",
+    "completion": "To evaluate the superiority of elacestrant compared to standard endocrine therapy"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What special screening is done before randomization in NCT05512364?",
+    "completion": "ctDNA screening to detect molecular relapse"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Who is eligible for randomization in trial NCT05512364?",
+    "completion": "Patients who are ctDNA-positive without evidence of distant metastasis"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What happens after the protocol treatment period in NCT05512364?",
+    "completion": "Treatment is left at the discretion of the treating physician"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What are the key cancer stages included in the study NCT05512364?",
+    "completion": "Stage IIB and Stage III ER+/HER2- breast cancer"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Is data management handled by EORTC in this trial?",
+    "completion": "Yes"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the recruitment status of trial NCT05512364?",
+    "completion": "Recruiting"
+  },
+
+
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What type of cancer does trial NCT05512364 focus on?",
+    "completion": "ER-positive, HER2-negative breast cancer"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the significance of ctDNA in trial NCT05512364?",
+    "completion": "ctDNA is used to detect molecular relapse and guide patient randomization."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the control treatment in the NCT05512364 trial?",
+    "completion": "Standard endocrine therapy that the patient was receiving when ctDNA-positive"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Is the trial NCT05512364 multi-center or single-center?",
+    "completion": "International, multi-center trial"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the superiority trial hypothesis in NCT05512364?",
+    "completion": "Elacestrant is superior to standard endocrine therapy for patients with ctDNA relapse."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the estimated total sample size for the trial NCT05512364?",
+    "completion": "220 participants"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Which organization sponsors the NCT05512364 trial?",
+    "completion": "European Organisation for Research and Treatment of Cancer (EORTC)"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Are patients with distant metastasis eligible for randomization in NCT05512364?",
+    "completion": "No, only patients without evidence of distant metastasis are eligible."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What endocrine drugs are included as comparators in NCT05512364?",
+    "completion": "Tamoxifen, Letrozole, Anastrozole, and Exemestane"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the estimated primary completion date for the elacestrant trial?",
+    "completion": "July 1, 2028"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the study completion date for trial NCT05512364?",
+    "completion": "May 1, 2030"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the official title of trial NCT05512364?",
+    "completion": "Elacestrant for Treating ER+/HER2- Breast Cancer Patients With ctDNA Relapse"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the mode of action for elacestrant in NCT05512364?",
+    "completion": "Elacestrant is a selective estrogen receptor degrader (SERD)."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Is the trial NCT05512364 blinded or open-label?",
+    "completion": "Open-label"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the primary outcome being measured in NCT05512364?",
+    "completion": "Superiority of elacestrant versus standard endocrine therapy in progression-free survival or overall survival."
+  },
 
 
 
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the minimum age for eligibility in trial NCT05512364?",
+    "completion": "18 years"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What hormone receptor status must patients have to be eligible for NCT05512364?",
+    "completion": "ER-positive and HER2-negative breast cancer"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "How is ER-positive status defined for inclusion in the trial?",
+    "completion": "At least 10% of cells staining positive for estrogen receptor (ER)"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What HER2 status is required for patient inclusion?",
+    "completion": "HER2-negative defined as 0 or 1+ by IHC or negative ISH"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What stages of breast cancer are eligible for this trial?",
+    "completion": "Stage IIB or Stage III according to UICC TNM 8th edition"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Is prior chemotherapy required for eligibility?",
+    "completion": "Yes, patients must have completed adjuvant chemotherapy or at least 4 cycles of neoadjuvant chemotherapy"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Are both premenopausal and postmenopausal women eligible?",
+    "completion": "Yes, both pre- and postmenopausal women are eligible"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What endocrine therapy duration is required before enrollment?",
+    "completion": "At least 2 years and up to 7 years of endocrine therapy"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Is prior treatment with CDK4/6 or PARP inhibitors allowed?",
+    "completion": "Yes, if completed at least 12 months before registration"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Are patients with multifocal tumors eligible?",
+    "completion": "Yes, if all foci are ER-positive and HER2-negative"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What tissue sample requirements must patients meet?",
+    "completion": "Available FFPE tumor block or slides with at least 25% tumor cellularity"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What consent must patients provide before enrollment?",
+    "completion": "Written informed consent according to ICH/GCP and local regulations"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the required ctDNA status for randomization?",
+    "completion": "Patients must be ctDNA-positive by the Signatera ctDNA assay"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Which imaging studies are used to exclude metastasis?",
+    "completion": "Mammogram, CT thorax and abdomen/pelvis with contrast, bone scintigraphy"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What ECOG performance status is required?",
+    "completion": "ECOG 0 or 1"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Are women of childbearing potential required to have a pregnancy test?",
+    "completion": "Yes, a negative sensitive serum or urine pregnancy test within 3 days prior to randomization"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Are patients with prior invasive breast cancer allowed?",
+    "completion": "No, prior history of invasive breast cancer excludes patients"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Can patients with recent malignancies other than breast cancer participate?",
+    "completion": "No, malignancies within the last 5 years exclude patients except certain skin cancers and carcinoma in situ of cervix"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Are patients with bilateral breast cancer eligible?",
+    "completion": "No, bilateral breast cancer is an exclusion criterion"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Are patients allowed to participate in other clinical trials?",
+    "completion": "Yes, except for ongoing interventional studies unless in follow-up phase"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What grade of unresolved toxicities excludes patients in the randomized phase?",
+    "completion": "Grade 2 or higher toxicities, except alopecia and peripheral neuropathy"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Are patients who cannot avoid CYP3A4 inhibitors or inducers eligible?",
+    "completion": "No, patients must be able to avoid these medications"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Are patients with recent cardiovascular disorders eligible?",
+    "completion": "No, those with cardiovascular events within 3 months prior to enrollment are excluded"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Are patients with active infections eligible?",
+    "completion": "No, uncontrolled infections grade 3 or higher exclude patients"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the study design of NCT05512364?",
+    "completion": "Randomized, open-label, parallel assignment interventional trial"
+  },
+
+
+
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What are the two arms in trial NCT05512364?",
+    "completion": "Arm A: Standard endocrine therapy; Arm B: Elacestrant"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What drugs are used in the control arm (Arm A) of NCT05512364?",
+    "completion": "Standard endocrine therapies such as Tamoxifen, Letrozole, Anastrozole, or Exemestane"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What drug is used in the experimental arm (Arm B) of trial NCT05512364?",
+    "completion": "Elacestrant"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Is the trial NCT05512364 blinded or open-label?",
+    "completion": "It is an open-label trial"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the primary purpose of trial NCT05512364?",
+    "completion": "Treatment"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the primary outcome measure for NCT05512364?",
+    "completion": "Progression-free survival (PFS) measured by imaging or clinical criteria"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the estimated enrollment for trial NCT05512364?",
+    "completion": "220 participants"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the estimated study start date for NCT05512364?",
+    "completion": "December 15, 2023"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the estimated primary completion date for NCT05512364?",
+    "completion": "July 1, 2028"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the estimated study completion date for NCT05512364?",
+    "completion": "May 1, 2030"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the allocation method in trial NCT05512364?",
+    "completion": "Randomized"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the interventional model of NCT05512364?",
+    "completion": "Parallel assignment"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the target population for NCT05512364?",
+    "completion": "Patients with ER-positive, HER2-negative breast cancer and ctDNA relapse"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Which organization sponsors NCT05512364?",
+    "completion": "European Organisation for Research and Treatment of Cancer (EORTC)"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Are male patients eligible for NCT05512364?",
+    "completion": "Yes, both female and male patients with ER-positive, HER2-negative breast cancer are eligible"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What role does ctDNA testing play in trial NCT05512364?",
+    "completion": "ctDNA testing identifies patients with molecular relapse who are eligible for randomization"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What follow-up treatment decisions are made after protocol treatment in NCT05512364?",
+    "completion": "Treatment is left at the discretion of the treating physician"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Is there a superiority design in trial NCT05512364?",
+    "completion": "Yes, it is a superiority phase III trial comparing elacestrant to standard endocrine therapy"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What endpoints besides PFS are assessed in trial NCT05512364?",
+    "completion": "Overall survival, safety, quality of life, and ctDNA clearance"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What imaging is used during screening for metastatic disease in NCT05512364?",
+    "completion": "Mammogram, CT thorax and abdomen/pelvis with contrast, and bone scintigraphy"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Are patients allowed to continue CDK4/6 inhibitor therapy in this trial?",
+    "completion": "No, prior CDK4/6 inhibitor must be completed at least 12 months before enrollment"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Is this trial international or limited to one country?",
+    "completion": "It is an international, multi-center trial"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What types of endocrine therapies are included as standard treatments in this trial?",
+    "completion": "Tamoxifen, Letrozole, Anastrozole, Exemestane"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the phase of the clinical trial NCT05512364?",
+    "completion": "Phase 3"
+  },
+
+
+
+  {
+    "prompt": "What is the NCT number of the trial studying elacestrant for ER+/HER2- breast cancer with ctDNA relapse?",
+    "completion": "NCT05512364"
+  },
+  {
+    "prompt": "What is the experimental treatment in trial NCT05512364?",
+    "completion": "Elacestrant 400 mg/day orally once daily on a continuous dosing schedule."
+  },
+  {
+    "prompt": "What are the drugs used in the control arm of trial NCT05512364?",
+    "completion": "Tamoxifen 20 mg QD, Letrozole 2.5 mg QD, Anastrozole 1 mg QD, or Exemestane 25 mg QD orally on a continuous dosing schedule."
+  },
+  {
+    "prompt": "What is the primary outcome measure in trial NCT05512364?",
+    "completion": "Distant metastasis free survival (DMFS), defined as time from randomization until first distant metastatic recurrence or death from any cause."
+  },
+  {
+    "prompt": "What is the time frame for measuring the primary outcome DMFS in trial NCT05512364?",
+    "completion": "5.2 years after the first patient is screened."
+  },
+  {
+    "prompt": "What is the secondary outcome related to ctDNA in trial NCT05512364?",
+    "completion": "ctDNA elimination rate at month 1, defined as the proportion of randomized patients with a negative ctDNA test result at month 1."
+  },
+  {
+    "prompt": "Who is the sponsor of trial NCT05512364?",
+    "completion": "European Organisation for Research and Treatment of Cancer (EORTC)."
+  },
+  {
+    "prompt": "Name two collaborators in the NCT05512364 trial.",
+    "completion": "Breast International Group and Menarini Group."
+  },
+  {
+    "prompt": "What type of trial is NCT05512364?",
+    "completion": "An international, multi-center, randomized, open-label, superiority phase III trial."
+  },
+  {
+    "prompt": "What patient population does NCT05512364 focus on?",
+    "completion": "Patients with ER-positive, HER2-negative breast cancer with ctDNA relapse but no evidence of distant metastasis."
+  },
+
+
+
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the NCT number of the trial studying elacestrant for ER+/HER2- breast cancer with ctDNA relapse?",
+    "completion": "NCT05512364"
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the experimental treatment in trial NCT05512364?",
+    "completion": "Elacestrant 400 mg/day orally once daily on a continuous dosing schedule."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What are the drugs used in the control arm of trial NCT05512364?",
+    "completion": "Tamoxifen 20 mg QD, Letrozole 2.5 mg QD, Anastrozole 1 mg QD, or Exemestane 25 mg QD orally on a continuous dosing schedule."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the primary outcome measure in trial NCT05512364?",
+    "completion": "Distant metastasis free survival (DMFS), defined as time from randomization until first distant metastatic recurrence or death from any cause."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the time frame for measuring the primary outcome DMFS in trial NCT05512364?",
+    "completion": "5.2 years after the first patient is screened."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the secondary outcome related to ctDNA in trial NCT05512364?",
+    "completion": "ctDNA elimination rate at month 1, defined as the proportion of randomized patients with a negative ctDNA test result at month 1."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Who is the sponsor of trial NCT05512364?",
+    "completion": "European Organisation for Research and Treatment of Cancer (EORTC)."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "Name two collaborators in the NCT05512364 trial.",
+    "completion": "Breast International Group and Menarini Group."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What type of trial is NCT05512364?",
+    "completion": "An international, multi-center, randomized, open-label, superiority phase III trial."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What patient population does NCT05512364 focus on?",
+    "completion": "Patients with ER-positive, HER2-negative breast cancer with ctDNA relapse but no evidence of distant metastasis."
+  },
+
+
+
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the official title of the clinical trial with NCT ID NCT05512364?",
+    "completion": "Elacestrant for Treating ER+/HER2- Breast Cancer Patients With ctDNA Relapse."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "When did the study NCT05512364 officially start?",
+    "completion": "December 15, 2023."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the estimated primary completion date for NCT05512364?",
+    "completion": "July 1, 2028."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the estimated study completion date for trial NCT05512364?",
+    "completion": "May 1, 2030."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "How many participants is the trial NCT05512364 expected to enroll?",
+    "completion": "220 participants."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the inclusion criterion related to ctDNA in NCT05512364?",
+    "completion": "Patients must be ctDNA positive according to the Signatera ctDNA assay."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the interventional model used in the trial NCT05512364?",
+    "completion": "Parallel assignment with randomized allocation."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What masking method is used in trial NCT05512364?",
+    "completion": "None (Open Label)."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the primary purpose of the study NCT05512364?",
+    "completion": "Treatment."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What type of breast cancer does trial NCT05512364 focus on?",
+    "completion": "ER-positive and HER2-negative breast cancer."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the main comparator treatment in the control arm of NCT05512364?",
+    "completion": "Standard endocrine treatment, such as Tamoxifen, Letrozole, Anastrozole, or Exemestane, given continuously."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What is the dosage schedule for Elacestrant in the experimental arm?",
+    "completion": "400 mg orally once daily on a continuous dosing schedule."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What are the key exclusion criteria in NCT05512364?",
+    "completion": "Prior treatment with SERD or investigational ER antagonists, unresolved Grade ≥ 2 toxic effects, bilateral breast cancer, recent other malignancies, and inability to tolerate oral medications."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What secondary outcome is measured at month 1 in NCT05512364?",
+    "completion": "The ctDNA elimination rate."
+  },
+  {
+    "nct_id": "NCT05512364",
+    "prompt": "What performance status is required for eligibility in NCT05512364?",
+    "completion": "ECOG performance status 0-1."
+  }
+]
